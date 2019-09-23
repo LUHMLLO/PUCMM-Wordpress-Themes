@@ -3,7 +3,7 @@ window.onload=function(){
 
 
     
-    const sidebar = document.querySelectorAll('.main-header-sidebar-links')[0];
+    const sidebar = document.querySelectorAll('.mobile-custom-sidebar')[0];
     const sidebarunderlay = document.querySelectorAll('.custom-mobile-sidebar-close-underlay')[0];
 
     const opensidebar = document.querySelectorAll('.main-header-btn')[0];

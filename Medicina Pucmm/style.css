@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open Sans&display=swap");
 @import url("https://unicons.iconscout.com/release/v1.0.0/css/unicons.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 /*
 Theme Name: Medicina Pucmm
 Theme URI: none
@@ -228,6 +229,7 @@ a, i, button {
   text-align: left !important;
   text-transform: uppercase;
   font-size: 14px;
+  /* custom dropdown */
 }
 
 @media (max-width: 991px) {
@@ -252,39 +254,164 @@ a, i, button {
   color: inherit !important;
 }
 
-.main-header-sidebar-links {
-  display: block !important;
-  list-style-type: none !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  text-align: left !important;
-  text-transform: uppercase;
-  font-size: 18px;
-  position: fixed;
-  background: white;
-  color: #333 !important;
-  z-index: 610;
+.main-header .main-header-links .dropdown {
+  white-space: nowrap !important;
+}
+
+.main-header .main-header-links .dropdown-links {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
   top: 0;
   left: 0;
+  z-index: 300 !important;
+  list-style-type: none !important;
+  margin: 25px auto 0 auto !important;
+  padding: 25px 0 15px 0 !important;
+  background: white;
+  min-width: 100% !important;
+  -webkit-box-shadow: 0 10px 10px -7px rgba(0, 0, 0, 0.23) !important;
+          box-shadow: 0 10px 10px -7px rgba(0, 0, 0, 0.23) !important;
+}
+
+.main-header .main-header-links .dropdown-links li {
+  position: relative;
+}
+
+.main-header .main-header-links .dropdown-links li a:hover::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
   height: 100%;
-  max-height: 100%;
-  min-width: 100px;
-  width: auto;
-  max-width: 100%;
+  border-bottom: solid 1px #378AC4;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.main-header-sidebar-links li {
-  margin: 0 !important;
-  color: inherit !important;
-  text-align: left !important;
+.main-header .main-header-links .dropdown-btn:hover + .dropdown-links,
+.main-header .main-header-links .dropdown-links:hover {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
 }
 
-.main-header-sidebar-links li a {
-  min-height: 100%;
+.mobile-custom-sidebar {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 610 !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  min-height: 100vh !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  min-width: 300px !important;
+  width: 300px !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  padding: 0px;
+  background: #378AC4;
+}
+
+.mobile-custom-sidebar .main-header-logo {
+  padding: 50px 10px;
+  margin: auto auto 22px auto;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 100%;
   width: 100%;
   max-width: 100%;
+}
+
+.mobile-custom-sidebar .main-header-logo img {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  margin: auto !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links {
+  list-style-type: none !important;
+  margin: 0 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  color: white !important;
+  /* custom dropdown */
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links li {
+  margin: 0 !important;
+  padding: 0 !important;
   color: inherit !important;
-  padding: 0 20px !important;
+  text-align: left !important;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links li a {
+  color: inherit !important;
+  padding: 10px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  text-transform: uppercase;
+  position: relative !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links li a::after {
+  display: none !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown {
+  white-space: nowrap !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-btn {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap !important;
+  position: relative !important;
+  cursor: pointer !important;
+  font-size: 16px !important;
+  display: inline-block !important;
+  min-width: 100% !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-btn:hover {
+  background: rgba(34, 34, 34, 0.297);
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-links {
+  display: none;
+  list-style-type: none !important;
+  margin: 0 0 !important;
+  padding: 0px !important;
+  background: none;
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px !important;
+  text-transform: lowercase !important;
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-links li a {
+  background: rgba(34, 34, 34, 0.397);
+}
+
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-btn:focus + .dropdown-links,
+.mobile-custom-sidebar .main-header-sidebar-links .dropdown-links:hover {
+  display: block !important;
+  opacity: 1 !important;
+  pointer-events: all !important;
 }
 
 .custom-mobile-sidebar-close-underlay {
@@ -322,50 +449,6 @@ a, i, button {
 
 .menu-header-navigation-item:hover::after {
   width: 100%;
-}
-
-/* custom dropdown */
-.dropdown {
-  white-space: nowrap !important;
-}
-
-.dropdown-links {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute !important;
-  top: 0 !important;
-  left: 0;
-  z-index: 300 !important;
-  list-style-type: none !important;
-  margin: 25px auto 0 auto !important;
-  padding: 25px 0 15px 0 !important;
-  background: white;
-  min-width: 100% !important;
-  -webkit-box-shadow: 0 10px 10px -7px rgba(0, 0, 0, 0.23) !important;
-          box-shadow: 0 10px 10px -7px rgba(0, 0, 0, 0.23) !important;
-}
-
-.dropdown-links li {
-  position: relative;
-}
-
-.dropdown-links li a:hover::after {
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-bottom: solid 1px #378AC4;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.dropdown-btn:hover + .dropdown-links,
-.dropdown-links:hover {
-  display: block !important;
-  opacity: 1 !important;
-  pointer-events: all !important;
 }
 
 @media (max-width: 767px) {

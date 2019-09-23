@@ -10,6 +10,8 @@
     
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/luis.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
    
     <?php wp_head(); ?>
 </head>
@@ -64,10 +66,18 @@
 
 
         
-        <?php wp_nav_menu(array(
-            'theme_location' => 'superior',
-            'container' => false,
-            'items_wrap' => '<ul class="main-header-sidebar-links">%3$s</ul>',
-            //'walker' => new sublevel_wrapper()
-        ));?> 
+
+        <div class="mobile-custom-sidebar animated slideInLeft">
+            <a class="main-header-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="#"/>
+            </a>
+
+            <?php wp_nav_menu(array(
+                'theme_location' => 'superior',
+                'container' => false,
+                'items_wrap' => '<ul class="main-header-sidebar-links">%3$s</ul>',
+                //'walker' => new sublevel_wrapper()
+            ));?>
+
+        </div> 
         <div class="animated fadeIn custom-mobile-sidebar-close-underlay"></div>

@@ -6,8 +6,6 @@ get_header(); ?>
 
 
 <div class="container-fluid">
-<div class="container-fluid">
-<div class="container-fluid">
     <div class="container-fluid bg-white" style="padding: 45px 45px 60px 45px !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
@@ -37,7 +35,5 @@ get_header(); ?>
             </div>
         </div><!----row--->
     </div><!---container fluid--->
-</div>
-</div>
 </div>
 <?php get_footer(); ?>
