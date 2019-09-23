@@ -63,7 +63,7 @@
 <header>
     <div class="container">
         <nav class="navbar navbar-main navbar-expand-lg navbar-light">
-            <a class="navbar-brand navbar-logo" href="<?php echo get_stylesheet_directory_uri(); ?>inicio">
+            <a class="navbar-brand navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>\img/logo.png" alt="#"/>
             </a>
 
