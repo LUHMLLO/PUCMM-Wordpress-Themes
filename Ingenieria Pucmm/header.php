@@ -14,7 +14,7 @@
     <link rel="stylesheet" src="https://fonts.googleapis.com/css?family=Pinyon+Script|Roboto|Roboto+Condensed:300,400,700|Roboto+Mono|Roboto+Slab&display=swap">
     <!-- imported css icons -->
     <link rel="stylesheet" src="https://unicons.iconscout.com/release/v1.0.0/css/unicons.css">
-    <link rel="stylesheet" src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <!-- imported css frameworks -->
     <link rel="stylesheet" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">

@@ -1,7 +1,13 @@
 <?php 
 
 
-
+if ( ! function_exists( 'wp_bootstrap_4_scripts' ) ) :
+function wp_unica_scripts() {
+    $parent_style = 'parent-style'; // This is 'Awaken-style' for the Awaken theme.
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+}
+endif;
+add_action( 'wp_enqueue_scripts', 'wp_unica_scripts' );
 
 
 
@@ -123,15 +129,6 @@ function pagination_bar() {
         ) );
 
         register_sidebar( array(
-            'name' => 'LeftSidebar Widget',
-            'id' => 'leftsidebar-widget',
-            'before_widget' => '<div class="hw-wsidget">',
-            'after_widget' => '</div>',
-            'before_title' => '<h2 class="hw-title">',
-            'after_title' => '</h2>',
-        ) );
-
-        register_sidebar( array(
             'name' => 'HomeHeaderWidget Widget',
             'id' => 'homeheaderwidget-widget',
             'before_widget' => '<div class="hw-widget">',
@@ -149,11 +146,6 @@ function pagination_bar() {
 
 
 add_theme_support( 'post-thumbnails' );
-
-
-
-
-
 
 
 

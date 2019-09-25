@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/luis.js"></script>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
    
     <?php wp_head(); ?>
 </head>
@@ -48,7 +48,6 @@
         </button>
 
         <?php wp_nav_menu(array(
-            'theme_location' => 'superior',
             'container' => false,
             'items_wrap' => '<ul class="main-header-links">%3$s</ul>',
             //'walker' => new sublevel_wrapper()
@@ -75,6 +74,8 @@
             <?php wp_nav_menu(array(
                 'theme_location' => 'superior',
                 'container' => false,
+                'link_before' => '',
+                'link_after'=>'',
                 'items_wrap' => '<ul class="main-header-sidebar-links">%3$s</ul>',
                 //'walker' => new sublevel_wrapper()
             ));?>

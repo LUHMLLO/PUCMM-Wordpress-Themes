@@ -55,22 +55,22 @@ window.onload=function(){
         var sticky = header.offsetTop;
 
         window.onscroll = function() {
-            let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                header.classList.remove('slideOutUp');
-                header.classList.add('slideInDown');
-                header.style.top = "0";
-            } else {
-                header.classList.remove('slideInDown');
-                header.classList.add('slideOutUp');
-                header.style.top = "-10px";
-            }
-            prevScrollpos = currentScrollPos;
+            if (window.pageYOffset >= (sticky + 1)) {
+                    header.classList.add("top-fixed-navbar");
 
-            if (window.pageYOffset >= sticky) {
-                header.classList.add("top-fixed-navbar")
+                    let currentScrollPos = window.pageYOffset;
+                    if (prevScrollpos > currentScrollPos) {
+                        header.classList.remove('slideOutUp');
+                        header.classList.add('slideInDown');
+                        header.style.top = "0";
+                    } else {
+                        header.classList.remove('slideInDown');
+                        header.classList.add('slideOutUp');
+                        header.style.top = "-10px";
+                    }
+                    prevScrollpos = currentScrollPos;
               } else {
-                header.classList.remove("top-fixed-navbar");
+                    header.classList.remove("top-fixed-navbar");
               }
         }
 

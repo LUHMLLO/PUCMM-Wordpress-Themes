@@ -1,7 +1,13 @@
-<?php 
+<?php
 
-
-
+if ( ! function_exists( 'wp_bootstrap_4_scripts' ) ) :
+function wp_unica_scripts() {
+    $parent_style = 'parent-style'; // This is 'Awaken-style' for the Awaken theme.
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), wp_get_theme()->get('Version'));
+}
+endif;
+add_action( 'wp_enqueue_scripts', 'wp_unica_scripts' );
 
 
 
@@ -12,31 +18,33 @@ if(function_exists('register_nav_menus')){
 
 
 /* change navbar li item class */
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 function special_nav_class($classes, $item){
      if( in_array('menu-item-has-children', $classes) ){
              $classes[] = 'nav-item nav-main-item dropdown';
      }
      return $classes;
 }
- 
+add_filter('nav_menu_css_class' , 'special_nav_class' , 999);
+
+
 
 /* change navbar li a class */
 function add_menuclass($ulclass) {
     return preg_replace('/<a /', '<a class="nav-link nav-opt dropdown-toggle"', $ulclass);
  }
- add_filter('wp_nav_menu','add_menuclass');
+ add_filter('wp_nav_menu','add_menuclass', 999);
+
 
 
  /* change navbar li sub-menu class */
 function change_submenu_class($dropdownmenu) {  
     return preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$dropdownmenu);   
 }  
-add_filter('wp_nav_menu','change_submenu_class');  
+add_filter('wp_nav_menu','change_submenu_class', 999);  
+
 
 
 /* change or add link atributtes */
-add_filter( 'nav_menu_link_attributes', 'wpse270596_add_navlink_atts', 10, 3 );
 function wpse270596_add_navlink_atts( $atts, $item, $args ) {
   if (in_array('menu-item-has-children', $item->classes)) {
     $atts['role'] = 'button';
@@ -46,6 +54,7 @@ function wpse270596_add_navlink_atts( $atts, $item, $args ) {
   }
 return $atts;
 }
+add_filter( 'nav_menu_link_attributes', 'wpse270596_add_navlink_atts', 999 );
 
 
 
