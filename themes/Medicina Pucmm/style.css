@@ -51,6 +51,37 @@ h1, h2, h3, h4, h5, h6, p, span, label, small, li, ul, strong, button, a, input,
     display: none;
 }
 */
+.custom-container-fluid {
+  width: 100%;
+  padding: 25px;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 576px) {
+  .custom-container-fluid {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-container-fluid {
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-container-fluid {
+    max-width: 92%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .custom-container-fluid {
+    max-width: 88%;
+  }
+}
+
 body {
   background-color: #e9ecef;
 }
