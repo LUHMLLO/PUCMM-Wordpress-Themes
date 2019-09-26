@@ -1,0 +1,67 @@
+/*------------------------
+    Contact Page
+-----------------------*/
+
+.contact-page-content-area {
+    padding: 120px 0 120px 0;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    .contact-us-shape-1{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .contact-us-shape-2{
+        position: absolute;
+        bottom: 170px;
+        right: -20px;
+    }
+    .contact-form-inner{
+        text-align: center;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+        padding: 72px 80px  80px 80px;
+        background-color: $white;
+        border-top: 1px solid rgba(0, 0, 0, 0.03);
+        .subtitle{
+            font-size: 20px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $base-color;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .title{
+            font-size: 60px;
+            font-weight: 700;
+            color: #1f2732;
+            line-height: 70px;
+            margin-bottom: 48px;
+        }
+        .contact-form-wrapper{
+            .form-element{
+                .the-icon{
+                    color: #a0a0b0;
+                }
+                .input-field{
+                    border-radius: 30px;
+                    border: 2px solid #e5e5e5;
+                    color: #a0a0b0;
+                    @include placeholder-color(#a0a0b0);
+                    &.textarea{
+                        height: 200px;
+                    }
+                    &.error{
+                        border-color: #dc3545;
+                        @include placeholder-color(#dc3545);
+                    }
+                }
+            }
+            .submit-btn{
+                width: 200px;
+                height: 60px;
+
+            }
+        }
+    }
+}

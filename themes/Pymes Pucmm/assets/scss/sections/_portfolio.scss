@@ -1,0 +1,47 @@
+/*---------------------------
+    Portoflio Area
+---------------------------*/
+.portfolio-area{
+    padding: 115px 0 90px 0;
+    position: relative;
+    overflow: hidden;
+    .portfolio-shape-1 {
+        position: absolute;
+        right: 0;
+       top: 0px;
+       z-index: 0;
+    }
+
+    .portfolio-shape-2 {
+        position: absolute;
+        left: 0;
+        bottom: -150px;
+    }
+    .single-portfolio-item{
+        margin-bottom: 30px;
+    }
+    .portfolio-menu{
+        margin-bottom: 30px;
+        ul{
+            li{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: #7e858f;
+                padding: 18px 40px;
+                cursor: pointer;
+                @include transition($transition);
+                border-radius: 30px;
+                &:hover{
+                     background-color: $base-color;
+                     color: $white;
+                }
+                &.active{
+                    background-color: $base-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}

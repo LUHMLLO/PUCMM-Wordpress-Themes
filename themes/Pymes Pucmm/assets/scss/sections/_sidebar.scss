@@ -1,0 +1,352 @@
+/*----------------------
+    Sidebar 
+-----------------------*/
+
+.sidebar {
+    &.details-page {
+        .widget-title {
+            text-align: left;
+            h4 {
+                font-size: 20px;
+                color: #131222;
+                &:after,
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        .widget-area {
+            margin-bottom: 30px;
+            border-radius: 5px;
+            &.similar-coin {
+                .widget-body {
+                    .similar-coin-list {
+                        margin-top: 10px;
+                        li {
+                            margin-bottom: 20px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                            .single-similar-coin-list {
+                                .single-similar-coin-inner {
+                                    .left-content {
+                                        display: inline-block;
+                                        position: relative;
+                                        .icon {
+                                            height: 40px;
+                                            width: 40px;
+                                            background-color: #f7f7f7;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            border-radius: 50%;
+                                        }
+                                        .content {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            padding-left: 50px;
+                                            .coin-name {
+                                                font-size: 14px;
+                                                color: #63617b;
+                                                line-height: 40px;
+                                            }
+                                        }
+                                    }
+                                    .right-content {
+                                        display: inline-block;
+                                        float: right;
+                                        .plus {
+                                            display: inline-block;
+                                            color: #63617b;
+                                            background-color: #e8e8e8;
+                                            border-radius: 50%;
+                                            @include transition($transition);
+                                            text-align: center;
+                                            a {
+                                                display: inline-block;
+                                                color: #63617b;
+                                                width: 40px;
+                                                height: 40px;
+                                                line-height: 40px;
+                                            }
+                                            &:hover {
+                                                background-color: #5cb85c;
+                                                a {
+                                                    color: $white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.banner {
+                padding: 0;
+                .widget-title {
+                    padding: 25px 40px 15px 40px;
+                }
+                .widget-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &.images {
+                border: none;
+                background-color: #f7f7f7;
+                .widget-body {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &.btn-widget {
+                padding: 0;
+                border: none;
+                .boxed-btn {
+                    &.follow {
+                        width: 100%;
+                        border-radius: 30px;
+                        height: 60px;
+                        text-align: left;
+                        padding: 0 40px;
+                        @include transition($transition);
+                        margin-bottom: 10px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &:hover {
+                            color: $white;
+                            opacity: .8;
+                        }
+                        span {
+                            float: right;
+                        }
+                    }
+                }
+            }
+            &.follwer {
+                .widget-body {
+                    .followers-list {
+                        margin-top: 10px;
+                        li {
+                            display: inline-block;
+                            margin-left: -30px;
+                            position: relative;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            a {
+                                position: inherit;
+                                z-index: 0;
+                                top: 0;
+                                left: 0;
+                                display: inline-block;
+                                width: 50px;
+                                height: 50px;
+                                background-color: #ff6c00;
+                                text-align: center;
+                                color: $white;
+                                font-weight: 700;
+                                font-size: 14px;
+                                text-transform: uppercase;
+                                border-radius: 50%;
+                                line-height: 48px;
+                                @include transition($transition);
+                                &:hover {
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.widget-area {
+    padding: 30px 40px 40px 40px;
+    border: 1px solid #eaeaea;
+    margin-bottom: 40px;
+    &.instagram {
+        padding-bottom: 35px;
+        .instagram-feed {
+            text-align: center;
+            margin-top: 32px;
+            li {
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+    &.social {
+        text-align: center;
+        .social-links {
+            margin-top: 25px;
+            li {
+                display: inline-block;
+                margin: 0 2px;
+                a {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    border: 1px solid #e3e3e3;
+                    color: #555555;
+                    font-size: 16px;
+                    @include transition($transition);
+                    &:hover {
+                        &.twitter {
+                            background-color: #55acee;
+                            border-color: #55acee;
+                            color: $white;
+                        }
+                        &.pinterest {
+                            background-color: #bd081c;
+                            border-color: #bd081c;
+                            color: $white;
+                        }
+                        &.facebook {
+                            background-color: #3b5999;
+                            border-color: #3b5999;
+                            color: $white;
+                        }
+                        &.instagram {
+                            background-color: #e4405f;
+                            border-color: #e4405f;
+                            color: $white;
+                        }
+                        &.wordpress {
+                            background-color: #0073AA;
+                            border-color: #0073AA;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.category {
+        padding-bottom: 38px;
+        .categories {
+            margin-top: 15px;
+            li {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eaeaea;
+                &:last-child {
+                    padding-bottom: 0;
+                    border: none;
+                }
+                a {
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #7d7c8f;
+                    @include transition($transition);
+                    &:hover {
+                        color: $base-color;
+                    }
+                    .count {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    &.latest-post {
+        padding-bottom: 36px;
+        .single-latest-post {
+            margin-bottom: 18px;
+            margin-top: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .media {
+                .media-body {
+                    padding-left: 5px;
+                    h5 {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        @include transition($transition);
+                        &:hover {
+                            color: $base-color;
+                        }
+                    }
+                    .meta-time {
+                        font-size: 14px;
+                        line-height: 100%;
+                        color: #7d7c8f;
+                    }
+                }
+            }
+        }
+    }
+    &.tags {
+        padding-bottom: 30px;
+        .tags-list {
+            margin-top: 30px;
+            li {
+                display: inline-block;
+                a {
+                    display: inline-block;
+                    color: #7d7c8f;
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding: 7px 13px;
+                    border: 1px solid #eaeaea;
+                    margin: 0 3px;
+                    margin-bottom: 10px;
+                    @include transition($transition);
+                    &:hover {
+                        background-color: $base-color;
+                        color: $white;
+                        border-color: $base-color;
+                    }
+                }
+            }
+        }
+    }
+    .widget-title {
+        text-align: center;
+        h4 {
+            font-size: 28px;
+            line-height: 38px;
+            display: inline-block;
+            font-weight: 700;
+            color: #2e3841;
+            position: relative;
+            &:after {
+                position: absolute;
+                left: -60px;
+                top: 50%;
+                width: 40px;
+                height: 2px;
+                background-color: #ebebeb;
+                content: '';
+                @include translateY(-50%);
+            }
+            &:before {
+                position: absolute;
+                right: -60px;
+                top: 50%;
+                width: 40px;
+                height: 2px;
+                background-color: #ebebeb;
+                content: '';
+                @include translateY(-50%);
+            }
+        }
+    }
+    .widget-body {}
+}

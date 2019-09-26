@@ -1,0 +1,54 @@
+/*----------------------
+    Top bar 
+-----------------------*/
+
+.topbar-bar {
+    background-color: $secondary-color;
+    padding: 13px 0;
+    .topbar-inner {
+        .topbar-left-content {
+            display: inline-block;
+            ul {
+                li {
+                    display: inline-block;
+                    margin: 0 5px;
+                    color: $white;
+                    font-size: 14px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    a {
+                        color: $white;
+                        font-size: 14px;
+                        line-height: 100%;
+                        @include transition($transition);
+                        &:hover {
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+        }
+        .topbar-right-content {
+            display: inline-block;
+            float: right;
+            ul {
+                li {
+                    display: inline-block;
+                    margin: 0 13px;
+                    font-size: 14px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        color: $white;
+                        @include transition($transition);
+                        &:hover {
+                            color: $base-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

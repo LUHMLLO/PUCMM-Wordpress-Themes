@@ -1,0 +1,88 @@
+/*-------------------------------------
+    Blog Page
+-------------------------------------*/
+.blog-page-content-area{
+    padding: 120px 0 120px 0;
+    .blog-page-content-area-inner{
+         .single-blog-post-item {
+             margin-bottom: 38px;
+             .thumb{
+                 margin-bottom: 24px;
+             }
+             .content{
+                 .post-meta {
+                     li{
+                         display: inline-block;
+                         font-size: 14px;
+                         color: #9c9cb2;
+                         margin: 0 8px;
+                         &:first-child{
+                             margin-left: 0;
+                         }
+                         a{
+                             font-size: 14px;
+                             color: #9c9cb2;
+                             @include transition($transition);
+                             &:hover{
+                                 color: $base-color;
+                             }
+                         }
+                     }
+                     margin-bottom: 8px;
+                 }
+                 .title{
+                     font-size: 40px;
+                     font-weight: 700;
+                     line-height: 50px;
+                     color: #1f2732;
+                     margin-bottom: 25px;
+                     @include transition($transition);
+                     &:hover{
+                         color: $base-color;
+                     }
+                 }
+                 p{
+                     font-size: 16px;
+                     line-height: 26px;
+                     color: #676f7a;
+                 }
+             }
+             
+         }
+         .post-navigation{
+             text-align: center;
+             .pagination {
+                 display: inline-block;
+                 li {
+                     display: inline-block;
+                     margin: 0 3px;
+                     &.active {
+                         a {
+                             background-color: $base-color;
+                             color: $white;
+                         }
+                     }
+                     a {
+                         display: inline-block;
+                         width: 40px;
+                         height: 40px;
+                         border-radius: 50%;
+                         border: 2px solid rgba(#2e3841, .1);
+                         font-size: 14px;
+                         font-weight: 700;
+                         line-height: 38px;
+                         text-align: center;
+                         color: #b7bdc5;
+                         @include transition($transition);
+                         &:hover {
+                             background-color: $base-color;
+                             color: $white;
+                         }
+                     }
+                 }
+             }
+         }
+         
+    }
+   
+}

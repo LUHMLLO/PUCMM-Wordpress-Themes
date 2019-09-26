@@ -1,0 +1,42 @@
+/*-----------------------
+    Service 
+------------------------*/
+.service-area{
+    padding: 115px 0 120px 0;
+    .single-service-box{
+        border: 1px solid #e5e5e5;
+        padding: 48px 45px 44px 50px;
+        .icon{
+             font-size: 70px;
+             line-height: 70px;
+             color: $base-color;
+             margin-bottom: 30px;
+        }
+        .content{
+            .title{
+                font-size: 24px;
+                line-height: 34px;
+                color: #1f2732;
+                font-weight: 700;
+                margin-bottom: 17px;
+                @include transition($transition);
+                &:hover{
+                    color: $base-color;
+                }
+            }
+            p{
+                font-size: 14px;
+                color: #676f7a;
+                line-height: 24px;
+                margin-bottom: 13px;
+            }
+            .readmore{
+                font-size: 14px;
+                font-weight: 700;
+                color: $base-color;
+                display: block;
+                 @include transition($transition);
+            }
+        }
+    }
+}

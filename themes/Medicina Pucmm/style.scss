@@ -1,0 +1,655 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css?family=Open Sans&display=swap');
+@import url('https://unicons.iconscout.com/release/v1.0.0/css/unicons.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/*
+Theme Name: Medicina Pucmm
+Theme URI: none
+Template: wp-bootstrap-4
+Author: Luis
+Description: "WP Bootstrap 4 CHILD THEME based on MedicinaPucmm Dnn Page and portrayed to wordpress by Luis Melo"
+Tags: wp bootstrap 4 child theme
+Version: 1.0.9.1568648598
+Updated: 2019-09-16 15:43:18
+Text Domain: wp-bootstrap-4-child
+*/
+
+
+/*
+Document   : PUCMM
+Created on : 18/09/2019
+Adaptation author: Luis Melo
+email: luis.jr.melo@gmail.com
+Description: Wordpress adaptation of MedicinaPucmm DNN Page.
+Styles: Compiled from sass file
+*/
+
+
+
+
+
+
+/* css frameworks fixes, modifications and font optimizations by Luis Melo (just in case) */
+
+body,html,*::before , *, *::after{
+    box-sizing: border-box !important;
+    will-change: contents !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: smooth !important;
+    -ms-overflow-style: scrollbar !important;
+
+}
+
+h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
+    font-family: -apple-system, BlinkMacSystemFont,'Open Sans',sans-serif;
+    text-shadow: rgba(0, 0, 0, 0.1) 0 0 1px;
+    font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    letter-spacing: .015px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: inherit !important;
+}
+
+
+/* enable this to hide all the scrollbars
+*::-webkit-scrollbar{
+    display: none;
+}
+*/
+
+
+
+body{
+    background-color: #e9ecef;
+}
+
+
+
+.bg-white{
+    background: white;
+}
+
+
+
+//*utilities*//
+
+a,i,button{
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.hide-on-mobile{
+    @media (max-width:991px) {
+        display: none !important;
+    }
+}
+.hide-on-desktop{
+    @media (min-width:991px) {
+        display: none !important;
+    }
+}
+
+
+.enable-animation{
+    display: inline-block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}
+.disable-animation{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+@mixin wide {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+@mixin tall{
+    min-height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+/* new styles */
+
+.top-bar{
+    display: flex;
+    justify-content: center;
+    background: #378AC4;
+    color: white;
+    position: relative !important;
+    z-index: 555 !important;
+
+    @include wide();
+
+    .top-bar-languages{
+        display: flex !important;
+        justify-content: flex-end !important;
+
+        span{
+            padding: 3px 10px;
+        }
+    }
+}
+
+
+
+
+
+.main-header{
+    @include wide();
+    height: 110px;
+    display: flex !important;
+    justify-content: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    z-index: 555 !important;
+    position: relative;
+    border: none !important;
+
+    .main-header-navigation{
+        display: flex !important;
+        justify-content: space-between !important;
+        color:inherit !important;
+        margin: auto;
+    
+        .main-header-logo,.main-header-btn{
+            margin: auto !important;
+            display: inline-flex !important;
+            justify-content: center !important;
+            padding: 0 !important;
+            background: none;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            color:inherit !important;
+        }
+
+        .main-header-logo{
+            min-width: 350px !important;
+            max-width: 350px !important;
+            object-fit: cover !important;
+            img{
+                width: inherit !important;
+                max-width: 100% !important;
+                object-fit: cover !important;
+            }
+            @media (max-width:991px) {
+                min-width: 270px !important;
+                max-width: 270px !important;
+                margin: auto auto auto 0px !important;
+            }
+        }
+
+        .main-header-btn {
+            @media (min-width:991px) {
+                display: none !important;
+            }
+
+            margin: auto 0px auto auto !important;
+
+            i{
+                margin: auto !important;
+                font-size: 22px;
+                color:inherit !important;
+            }
+        }
+
+    }
+}
+
+.top-fixed-navbar{
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    @include wide();
+}
+
+
+
+
+
+
+
+
+.main-header{
+    
+        .main-header-links {
+            @media (max-width:991px){
+                display: none !important;
+                opacity: 0 !important;
+                visibility: hidden !important;
+            }
+            display: inline-flex !important;
+            justify-content: center !important;
+            background: none;
+            outline: none;
+            border: none;
+            text-decoration: none;
+
+            list-style-type: none !important;
+            margin: 0 auto !important;
+            padding: 0 !important;
+            color:inherit !important;
+            text-align: left !important;
+            text-transform: uppercase;
+            font-size: 14px;
+            li {
+                margin: auto !important;
+                padding: 5px 20px !important; 
+                color:inherit !important;
+                text-align: left !important;
+                a{
+                    @include tall();
+                    color:inherit !important;   
+                }
+            }
+
+            /* custom dropdown */
+            .dropdown{
+                white-space: nowrap !important;
+            }
+            .dropdown-links{
+                display: none;
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 300 !important;
+                list-style-type: none !important;
+                margin: 25px auto 0 auto !important;
+                padding: 25px 0 15px 0 !important;
+                background: white;
+                min-width: 100% !important;    
+                box-shadow: 0 10px 10px -7px rgba(0,0,0,0.230)!important;
+
+                li{
+                    position: relative;
+                            
+                                
+                    a:hover::after{
+                        content: '';
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        border-bottom: solid 1px #378AC4;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+            .dropdown-btn:hover + .dropdown-links,
+            .dropdown-links:hover{
+                display: block !important;
+                opacity: 1 !important;
+                pointer-events: all !important;
+            }
+        }
+    
+}
+
+
+
+
+
+
+.mobile-custom-sidebar{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 610 !important;       
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    min-height: 100vh !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    min-width: 300px !important;
+    width: 300px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+
+    padding:0px;
+    background: #378AC4;
+
+    .main-header-logo{
+        padding: 50px 10px;
+        margin: auto auto 22px auto;
+        background: white;
+        display: flex;
+        justify-content: center;
+        @include wide();
+        img{
+            @include wide();
+            margin: auto !important;
+        }
+    }
+
+    .main-header-sidebar-links {
+        list-style-type: none !important;
+        margin: 0 0 !important;
+        padding: 0 !important;
+        text-align: left !important;
+        color:white !important;
+        
+    
+        li {
+            margin: 0 !important;
+            padding: 0 !important;
+            color:inherit !important;
+            text-align: left !important;
+            @include wide();    
+            a{
+                color:inherit !important;   
+                padding: 10px !important;
+                margin: 0 !important;
+                cursor: pointer !important;
+                text-transform: uppercase;
+                position: relative !important;
+    
+                &::after{
+                    display: none !important;
+                }
+            }
+        }
+        
+        /* custom dropdown */
+        .dropdown{
+            white-space: nowrap !important;
+        }
+        .dropdown-btn{
+            @include wide();            
+            white-space: nowrap !important;
+            position: relative !important;
+            cursor: pointer !important;
+            font-size: 16px !important;
+            display: inline-block !important;
+            min-width: 100% !important;
+            
+            &:hover{
+                background: rgba(34, 34, 34, 0.297);
+            }
+        }
+        .dropdown-links{
+            display: none;
+            list-style-type: none !important;
+            margin: 0 0 !important;
+            padding: 0px !important;
+            background: none;
+            @include wide();
+            font-size: 14px !important;
+            text-transform: lowercase !important;
+
+            li a{
+                background: rgba(34, 34, 34, 0.397);
+            }
+        }
+        .dropdown-btn:hover + .dropdown-links,
+        .dropdown-links:hover{
+            display: block !important;
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+
+    }
+    
+
+
+
+}
+
+
+.custom-mobile-sidebar-close-underlay{
+    position: fixed !important;
+    z-index: 600;
+
+    top: 0;
+    left: 0;
+
+    @include wide();
+    @include tall();
+
+    display: none;
+    background: rgba(0, 0, 0, 0.473);
+}
+
+
+
+
+
+
+
+.menu-header-navigation-item{
+    position: relative;
+        
+    &::after{
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 100%;
+        margin-top: 5px;
+        border-bottom: solid 1px #378AC4;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    &:hover::after{
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+.row-reverse-mobile{
+    @media(max-width:767px){
+        flex-direction: column-reverse !important;
+    }
+}
+
+
+
+
+
+.footer-wrapper{
+    background: #31312c!important;
+    padding:30px !important;
+    color:white;
+
+    h2{
+        font-size: 27.2px;
+    }
+    h6{
+        font-size: 20px;
+        padding-bottom: 25px;
+        position: relative;
+        margin: 0 !important;
+
+        &::after{
+            display: block;
+            width: 25%;
+            content: '';
+            margin: 10px 0;
+            padding:0.5px;
+            border: solid 1px #ffc107;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    a{
+        font-size: 14px;
+    }
+
+    .footer-title{
+        text-align: center !important;
+        padding: 10px 50px 50px 50px;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-content: center !important;
+    }
+
+    .footer-divisor{
+        @include wide();
+        padding:0.5px;
+        border: solid 1px #5c4384;
+        margin: 25px auto;
+    }
+
+    .copyright{
+        @include wide();
+        text-align: center !important;
+        padding: 50px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-content: center !important;
+
+        span{
+            margin: auto !important;
+            text-align: center !important;
+        }
+    }
+}
+
+
+
+
+
+
+.top-breadcrumb-container{
+    @include wide();
+    padding: 0 0 35px 0;
+    
+    ul{
+        list-style-type: none !important;
+        margin: 0;
+        padding: 0;
+        font-size: 13px !important;
+        color: #A0A7AB !important;
+        text-transform: uppercase !important;
+
+        li{
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+}
+
+.secondary-navigation-bar-implementation{
+    ul{
+        list-style-type: none !important;
+        margin: 0;
+        padding: 0;
+        font-size: 16px !important;
+        color: #5555;
+        text-transform: capitalize;
+
+        li{
+            border-bottom: 1px dotted #d9d9d9;
+            padding: 10px 40px 10px 0 !important;
+            
+            a{
+                color: #00539B !important;
+                transition: all 0.5s ease-in-out;
+                &::after{
+                    border:none !important;
+                    outline: none !important;
+                    display: none !important;
+                }
+                &:hover::after{
+                    border:none !important;
+                    outline: none !important;
+                    display: none !important;
+                }
+                &:hover{
+                    font-weight:600 !important;
+                }
+            }
+        }
+    }
+}
+
+
+.header-widget-video-container{
+    overflow: hidden !important;
+    @include wide();
+    height: 50vh;
+
+    video{
+        @include wide();
+        height: auto;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: auto !important;
+    }
+
+    .overlay{
+        @include wide();
+        @include tall();
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        margin: auto !important;
+        background: rgba(0, 83, 155, 0.568);
+        color: white !important;
+
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        h5{
+            margin: auto;
+        }
+    }
+
+}
+

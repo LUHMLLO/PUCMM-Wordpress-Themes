@@ -1,0 +1,71 @@
+/*--------------------------
+    News Feeds
+---------------------------*/
+.news-feed-area{
+    position: relative;
+    padding: 113px 0 100px 0;
+    z-index: 0;
+    overflow: hidden;
+    .news-feed-shpae-2{
+        position: absolute;
+        right: 0;
+        top: -130px;
+    }
+    .news-feed-shpae-1 {
+        position: absolute;
+        left: 0;
+        top: -130px;
+    }
+    .single-news-feed-item{
+        .thumb{
+            margin-bottom: 30px;
+        }
+        .description{
+            position: relative;
+            .time{
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                background-color: #1085e3;
+                text-align: center;
+                border-radius: 6px;
+                padding-top: 8px;
+                .date{
+                    font-size: 30px;
+                    line-height: 16px;
+                    font-weight: 300;
+                    color: $white;
+                    margin-bottom: 0;
+                }
+                .month{
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: $white;
+                    text-transform: uppercase;
+                }
+            }
+            .content{
+                padding-left: 80px;
+                .title{
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    color: #1f2732;
+                    @include transition($transition);
+                    &:hover{
+                        color: $base-color;
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #676f7a;
+                }
+            }
+        }
+    }
+}

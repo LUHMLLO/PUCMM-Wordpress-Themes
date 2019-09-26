@@ -1,0 +1,56 @@
+/*------------------------
+    Pricing  area
+-------------------------*/
+.pricing-area{
+    padding: 113px 0 150px 0;
+   
+    .single-pricing-table{
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        .body{
+            position: relative;
+            padding: 28px 0 74px 0;
+            .price{
+                .name{
+                    font-weight:700;
+                    font-size: 50px;
+                    line-height: 60px;
+                    color: #1f2732;
+                    margin-bottom: 0px;
+                }
+                .month{
+                    font-size: 14px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #2a9cf5;
+                }
+                margin-bottom: 25px;
+            }
+            ul{
+                li{
+                    display: block;
+                    font-size: 14px;
+                    color: #676f7a;
+                    line-height: 30px;
+                }
+            }
+                .boxed-btn{
+                    width: 230px;
+                    height: 60px;
+                    border-color: #e5e5e5;
+                    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+                    position: absolute;
+                    left: 50%;
+                    bottom: -30px;
+                    background-color: $white;
+                    font-size: 14px;
+                    color: #a8acbb;
+                    @include translateX(-50%);
+                    &:hover{
+                        background-color: $base-color;
+                        color: $white;
+                    }
+                }
+        }
+    }
+}

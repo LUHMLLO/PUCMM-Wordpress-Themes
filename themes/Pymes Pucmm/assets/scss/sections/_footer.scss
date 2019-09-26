@@ -1,0 +1,84 @@
+/*---------------------
+    Footer Area
+----------------------*/
+.footer-area{
+    overflow: hidden;
+    .footer-bottom-area {
+        background-color: $base-color;
+        padding: 65px 0 63px 0;
+        &.footer-bottom-bg{
+            background-image: url(../img/bg/footer-bottom-bg.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .copyright-area{
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+    .footer-top{
+        padding: 80px 0 77px 0;
+        position: relative;
+        overflow: hidden;
+        .footer-top-shape-1{
+            position: absolute;
+            left: 0;
+            top: -90px;
+        }
+        .footer-top-shape-2{
+            position: absolute;
+            right: 0;
+            top: -90px;
+        }
+        .footer-top-inner{
+            .footer-links{
+                li{
+                    display: inline-block;
+                    margin: 0 15px;
+                    a{
+                        color: #8e96a0;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            .social-icons{
+                margin-bottom: 32px;
+                li{
+                    display: inline-block;
+                    margin: 0 5px;
+                    a{
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        background-color: #ddd;
+                        line-height: 50px;
+                        text-align: center;
+                        color: $white;
+                        @include transition($transition);
+                        &:hover{
+                            opacity: .8;
+                        }
+                        &.facebook{
+                            background-color: #3b5999;
+                        }
+                        &.twitter{
+                            background-color: #55acee;
+                        }
+                        &.linkedin{
+                            background-color: #0077B5;
+                        }
+                        &.behance{
+                            background-color: #003ECB;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

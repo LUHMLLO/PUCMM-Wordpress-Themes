@@ -1,0 +1,110 @@
+/*----------------------------
+    Best Company 
+----------------------------*/
+.best-company-area {
+    padding: 115px 0 100px 0;
+    &.best-company-about-bg{
+         background-image: url(../img/bg/about-page-company-bg.jpg);
+         background-position: center;
+         background-size: cover;
+    }
+    &.best-company-service-bg{
+         background-image: url(../img/bg/service-page-company-bg.jpg);
+         background-position: center;
+         background-size: cover;
+    }
+    &.best-company-bg{
+        background-image: url(../img/bg/best-company-bg.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .right-content-right{
+        position: relative;
+        .subtitle{
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #a0d4ff;
+            display: block;
+            margin-bottom: 13px;
+        }
+        .title{
+            font-size: 50px;
+            line-height: 60px;
+            font-weight: 700;
+            color: $white;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: 16px;
+            color: $white;
+            line-height: 26px;
+        }
+        .bg-text{
+            position: absolute;
+            bottom: -190px;
+            font-size: 200px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: rgba($white,.06);
+        }
+    }
+}
+.best-comapany-two{
+    background-color: #1f2732;
+    overflow: hidden;
+    position: relative;
+    padding: 120px 0 112px 0;
+    &.portfolio-page{
+        padding-bottom: 100px;
+        .left-content-area {
+            .best-company-img-1 {
+                display: inline-block;
+                border-radius: 10px;
+                &:first-child {
+                    margin-right: 25px;
+                }
+            }
+        }
+        .right-content-area{
+            padding-top: 0;
+        }
+    }   
+    
+    .bg-text{
+        font-size: 200px;
+        line-height: 300px;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: absolute;
+        left: 20%;
+        bottom: -70px;
+        color: rgba($white,.01);
+    }
+    .right-content-area{
+        padding-left: 20px;
+        padding-top: 13px;
+        .subtitle{
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #0f8bf0;
+            font-weight: 700;
+            line-height: 26px;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .title{
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 60px;
+            color: $white;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 26px;
+            color: #a3abb5;
+        }
+    }
+}

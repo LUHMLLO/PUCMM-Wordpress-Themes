@@ -1,0 +1,142 @@
+/*----------------------------
+    Team member
+----------------------------*/
+.team-member-area{
+    background-color: #fafafa;
+    padding: 115px 0 120px 0;
+    &.team-page{
+        @extend .about-page;
+        padding-top: 120px !important;
+    }
+    &.about-page{
+        .single-team-memeber {
+            margin-top: 90px;
+            background-color: $white;
+            text-align: center;
+            position: relative;
+            .thumb {
+                position: absolute;
+                left: 50%;
+                @include translateX(-50%);
+                top: -90px;
+                box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                }
+            }
+            .content {
+                padding: 113px 40px 38px 40px;
+                .post {
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #0f8bf0;
+                    display: block;
+                    margin-bottom: 8px;
+                }
+                .name {
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: #1f2732;
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: #676f7a;
+                }
+                .social-icons {
+                    margin-top: 25px;
+                    li {
+                        display: inline-block;
+                        a {
+                            display: inline-block;
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fafafa;
+                            border-radius: 50%;
+                            line-height: 50px;
+                            color: #676f7a;
+                            font-size: 14px;
+                            @include transition($transition);
+                            &:hover {
+                                background-color: $base-color;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .team-carousel{
+        .single-team-memeber{
+            margin-top: 90px;
+            background-color: $white;
+            text-align: center;
+            position: relative;
+
+            .thumb{
+                position: absolute;
+                left: 50%;
+                @include translateX(-50%);
+                top: -90px;
+                box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+                width: 180px;
+                height: 180px;
+                border-radius: 50%;
+                img{
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 50%;
+                }
+            }
+            .content{
+                padding: 113px 40px 38px 40px;
+                .post{
+                    font-size: 16px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    color: #0f8bf0;
+                    display: block;
+                    margin-bottom: 8px;
+                }
+                .name{
+                    font-size: 26px;
+                    font-weight: 700;
+                    color: #1f2732;
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 26px;
+                    color: #676f7a;
+                }
+                .social-icons{
+                    margin-top: 25px;
+                    li{
+                        display: inline-block;
+                        a{
+                            display: inline-block;
+                            width: 50px;
+                            height: 50px;
+                            background-color: #fafafa;
+                            border-radius: 50%;
+                            line-height: 50px;
+                            color: #676f7a;
+                            font-size: 14px;
+                            @include transition($transition);
+                            &:hover{
+                                background-color: $base-color;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

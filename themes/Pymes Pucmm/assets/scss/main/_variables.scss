@@ -1,0 +1,35 @@
+
+//== Template Main Color
+$base-color: #2a9cf5;
+$secondary-color: #1f2732;
+$bg-color:#f7f7f7;
+$white: #fff;
+//== heading color
+$heading-color: #1f2732;
+$descr-color: #676f7a;
+
+/*-----------------
+    @Typography
+-----------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+$body-font:'Open Sans',
+sans-serif;
+$heading-font:'Open Sans',
+serif;
+//== font sizes
+$base-font-size: 16px !default;
+$font-size-h1: 70px !default;
+$font-size-h2: 60px !default;
+$font-size-h3: 26px !default;
+$font-size-h4: 22px !default;
+//** Unit-less `line-height` for use in components like buttons.
+$line-height: 1.6 !default; // 24/15
+// border-radius
+$border-radius-5: 5px !default;
+$border-radius-25: 25px !default;
+$border-radius-3: 3px !default;
+$border-radius-circle: 50% !default;
+//  transition
+$transition: all .3s ease-in;
+$transition-long: all .5s ease-in;

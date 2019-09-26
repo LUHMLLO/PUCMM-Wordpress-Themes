@@ -1,0 +1,78 @@
+/*---------------------------
+    Testimonial 
+----------------------------*/
+.testimonial-area {
+    padding: 120px 0;
+    &.testimonial-bg{
+        background-image: url(../img/bg/testimonial-bg.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .testimonial-carousel{
+        .owl-nav div{
+            position: absolute;
+            left: -30%;
+            top: 50%;
+            font-size: 70px;
+            line-height: 70px;
+            color: $white;
+            @include transition($transition);
+            @include translateY(-50%);
+            &:hover{
+                color: $base-color;
+            }
+            &.owl-next{
+                left: auto;
+                right: -30%;
+            }
+        }
+        .single-testimonial-item{
+            text-align: center;
+            .img-wrapper{
+                 img {
+                     border-radius: 50%;
+                 }
+                position: relative;
+                display: inline-block;
+                margin-bottom: 23px;
+                .icon{
+                    position: absolute;
+                    right: 0;
+                    bottom: 10px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: $base-color;
+                    color: $white;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+            }
+            .details {
+                .post{
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: #1085e3;
+                    font-weight: 700;
+                    line-height: 24px;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .name{
+                    font-size: 36px;
+                    font-weight: 700;
+                    line-height: 46px;
+                    color: $white;
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-size: 20px;
+                    line-height: 30px;
+                    color: #8c949f;
+                    max-width: 770px;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
