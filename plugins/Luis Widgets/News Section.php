@@ -29,31 +29,99 @@ class News_Section extends WP_Widget {
 		}
 
 		?>
-		<div class="row">
-		    <?php query_posts('posts_per_page=3');
-                if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    <article style="padding: 22px !important;" class="recent-posts-object col-sm-12 col-md-4 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-                        <div style="background:white !important; ">
-                            <a href="<?php the_permalink(); ?>">
-                                <div class="recent-post-thumbnails" style="margin:0 !important;padding:0 !important;min-width: 100% !important; width: 100% !important;max-width: 100% !important;min-height:200px !important;height:255px !important;max-height:255px !important;overflow:hidden !important;object-fit: cover !important;position: relative !important;">
-                                   <?php the_post_thumbnail('luis_size'); ?>
-                                </div>  
-                            </a>
-                            <div class="recent-post-content"><!-- content  -->
-                                <a href="<?php the_permalink(); ?>" style="font-size:16px !important;"> 
-                                    <h6 style="font-size:16px !important;"><?php the_title(); ?></h6>
-                                </a>
-                                <div style="font-size:12px !important;">
-                                    <p style="font-size:12px !important;">
-                                        <?php the_excerpt(); ?>
-                                    </p>
-                                </div>
-                            </div><!-- //.content -->
-                        </div>
-                    </article><!-- //. single blog post item-->
-            <?php endwhile; endif; ?>
-            <?php wp_reset_query(); ?>
-		</div>
+		<div class="recent-news-widget-plugin">
+		<h3>Noticias</h3>
+			<div class="row" style="overflow:hidden !important; margin:auto !important; max-width:99% !important;">
+				<?php query_posts('posts_per_page=3');
+					if (have_posts()) : while (have_posts()) : the_post(); ?>
+						<article class="recent-posts-object col-sm-12 col-md-4 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+							<div class="recent-posts-object-inner">
+								<a href="<?php the_permalink(); ?>">
+									<div class="recent-post-thumbnails">
+									<?php the_post_thumbnail('luis_size');?>
+									</div>  
+								</a>
+								<div class="recent-post-content"><!-- content  -->
+									<a href="<?php the_permalink(); ?>"> 
+										<h6><?php the_title(); ?></h6>
+									</a>
+									<div class="recent-posts-content-text">
+											<?php the_excerpt(); ?>
+									</div>
+								</div><!-- //.content -->
+							</div><!---recent post objet inner--->
+						</article><!-- //. recent post objet-->
+				<?php endwhile; endif; ?>
+				<?php wp_reset_query(); ?>
+			</div>
+		</div><!---recent-news-widget-plugin--->
+
+		<style>
+		  .recent-news-widget-plugin{
+			background:#F8F9FA;
+			padding: 10px 0;
+			  overflow: hidden !important;
+			  box-sizing:border-box !important;
+		  }
+		  .recent-news-widget-plugin h3{
+			  padding: 5px 15px 0 15px !important;
+		  }
+		  .recent-posts-object{
+			  margin:0px !important;
+			  padding:10px !important;
+			  min-height:450px !important;
+			  height:auto !important;
+			  max-height:550px !important;
+		  }
+		  .recent-posts-object-inner{
+			background:white;
+			  overflow: hidden !important;
+			  min-height:100% !important;
+			  height:100% !important;
+			  max-height:100% !important;
+		  }
+		  .recent-post-thumbnails{
+			margin:0 0 5px 0!important;
+			padding:0 !important;
+			min-width: 100% !important; 
+			width: 100% !important;
+			max-width: 100% !important;
+			min-height:200px !important;
+			height:255px !important;
+			max-height:255px !important;
+			overflow:hidden !important;
+			object-fit: cover !important;
+			position: relative !important;
+		  }
+		  .recent-post-thumbnails img{
+			  position:absolute !important;
+			  top:0;
+			  right:0;
+			  bottom:0;
+			  left:0;
+			  margin:auto !important;
+			  min-width:100%;
+			  max-width:100%;
+			  min-height:100%;
+			  max-height:100%;
+			  object-fit:cover !important;
+		  }
+		  .recent-post-content{
+			  padding:10px 15px 15px 15px !important;
+		  }
+		  .recent-post-content a{
+			  margin: 0 !important;
+			  padding: 0 !important;
+			  font-size:16px !important;
+			  text-decoration:none !important;
+			  text-transform:uppercase !important;
+		  }
+		  .recent-posts-content-text{
+			  margin: 0 !important;
+			  padding: 0 !important;
+			  font-size:12px !important;			  
+		  }
+		</style>
 		<?php 
 		
 		echo $args['after_widget'];
@@ -91,3 +159,9 @@ function show_custom_widget() {
     return $contents;
 }
 add_shortcode( 'NewsSection', 'show_custom_widget' );
+
+
+function ld_custom_excerpt_length( $length ) {
+    return 40;
+}
+add_filter( 'excerpt_length', 'ld_custom_excerpt_length', 999 );
