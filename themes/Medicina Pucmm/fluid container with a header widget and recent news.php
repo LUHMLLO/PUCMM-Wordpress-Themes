@@ -13,7 +13,7 @@ get_header(); ?>
    </div>
 
 
-    <div class="custom-container-fluid bg-white" style="padding-top:50px;padding-bottom:50px;">
+    <div class="container bg-white" style="padding-top:50px;padding-bottom:50px;">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
 

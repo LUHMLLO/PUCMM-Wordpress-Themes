@@ -39,6 +39,33 @@ $(document).ready(function(){
 
 
 
+
+
+        
+        const header = document.querySelectorAll(".henry-header")[0];
+        let prevScrollpos = window.pageYOffset;
+        var sticky = header.offsetTop;
+
+        window.onscroll = function() {
+            if (window.pageYOffset >= (sticky + 1)) {
+                    header.classList.add("top-fixed-navbar");
+
+                    let currentScrollPos = window.pageYOffset;
+                    if (prevScrollpos > currentScrollPos) {
+                        header.classList.remove('slideOutUp');
+                        header.classList.add('slideInDown');
+                        header.style.top = "0";
+                    } else {
+                        header.classList.remove('slideInDown');
+                        header.classList.add('slideOutUp');
+                        header.style.top = "-100px";
+                    }
+                    prevScrollpos = currentScrollPos;
+              } else {
+                    header.classList.remove("top-fixed-navbar");
+              }
+        }
+
         
 
 

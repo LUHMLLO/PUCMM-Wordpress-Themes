@@ -60,7 +60,7 @@
 
 
 <!-- BEGIN HEADER -->
-<header class="henry-header">
+<header class="henry-header" style="background:white;">
     <div class="container">
         <nav class="navbar navbar-main navbar-expand-lg navbar-light">
             <a class="navbar-brand navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"4>

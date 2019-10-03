@@ -109,19 +109,26 @@ function pagination_bar() {
 
 
 
-    function wpb_widgets_init() {
-        
-        register_sidebar( array(
+function wpb_widgets_init() {
+    register_sidebar( array(
         'name' => 'Header Widget',
         'id' => 'header-widget',
         'before_widget' => '<div class="hw-widget">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="hw-title">',
         'after_title' => '</h2>',
-        ) );
-    
-    }
-    add_action( 'widgets_init', 'wpb_widgets_init' );
+    ) );
+
+    register_sidebar( array(
+        'name' => 'HomeHeaderWidget Widget',
+        'id' => 'homeheaderwidget-widget',
+        'before_widget' => '<div class="hw-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="hw-title">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'wpb_widgets_init' );
 
 
 

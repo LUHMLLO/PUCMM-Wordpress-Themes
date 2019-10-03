@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="custom-container-fluid bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
