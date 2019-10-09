@@ -30,53 +30,89 @@ class Header_Video extends WP_Widget {
 
 		?>
 		<div class="header-video-wrapper">
-		   <video autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" src="http://medicina.pucmm.edu.do/Portals/0-System/Skins/Bootstrap%204%20Instant/Video/medicina2.mp4"></video>
-		   <div class="header-video-overlay-wrapper">
-		      <h1>Conoce la Escuela</h1>
-		   </div>
+		   <video  width="100%" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline">
+		     <source src="http://medicina.pucmm.edu.do/wp-content/uploads/sites/5/2019/10/medicina2_Trim-4.mp4">
+		   </video>
 		</div>
 		<style>
 		  .header-video-wrapper{
 			  min-width:100%;
 			  width:100%;
 			  max-width:100%;
-			  height:400px;
-			  overflow:hidden;
-			  object-fit: cover;
-			  position:relative;
+			  height:400px !important;
+			  max-height: 400px !important;
+			  overflow:hidden !important;
+			  position:relative !important;
+			  background: none;
+			  object-fit: cover !important;
 		  }
 		  .header-video-wrapper video{
-			  min-width:100%;
-			  width:100%;
-			  max-width:100%;
-			  object-fit: cover;
+			  position:absolute;
+			  top:0;
+			  right:0;
+			  bottom:0;
+			  left:0;
+			  margin:auto !important;			  
+			  min-width:100% !important;
+			  width:100% !important;
+			  max-width:100% !important;
+			  min-height:100%;
+			  object-fit: cover !important;
+			  padding: 0 !important;
 		  }
-		  .header-video-overlay-wrapper{
-			  background: rgb(14, 120, 193, 0.55);
+		  .header-video-wrapper video > source{
+			  margin:auto !important;			  
+			  min-width:100% !important;
+			  width:100% !important;
+			  max-width:100% !important;
+			  min-height:100%;
+			  height:100%;
+			  max-height:100%;
+			  object-fit: cover !important;
+			  padding: 0 !important;
+		  }
+		  .header-video-wrapper::before{
+			  
+			  display:block;
+			  content: '';
+
+			  z-index:1;
+			  position:absolute;
+			  top:0;
+			  right:0;
+			  bottom:0;
+			  left:0;
+			  margin:auto !important;
+
+			  background: rgba(14, 120, 193, 0.55);
+			  opacity:0.6;
 			  min-width:100%;
 			  width:100%;
 			  max-width:100%;
 			  min-height:100%;
 			  height:100%;
 			  max-height:100%;
-
-			  position:absolute;
-			  top:0;
-			  left:0;
-			  bottom:0;
-			  right:0;
-			  margin:auto !important;
-
-			  display:flex;
-			  justify-content:center;
-			  align-content:center;
-			  flex-direction:column;
 		  }
-		  .header-video-overlay-wrapper h1{
-			  margin:auto !important;
+		  .header-video-wrapper::after{
+			  display:block;
+			  content: 'Conoce la escuela';
+
+			  z-index:2;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  transform:translate(-50%,-50%);
+			  margin: auto auto !important;
+
 			  color:white !important;
 			  font-size:72px !important;
 			  font-weight:bold;
+			  text-align:center;
+		  }
+		  @media(max-width:991px){
+			  .header-video-wrapper::after{
+				  font-size:55px !important;
+			  }
 		  }
 		</style>
 		<?php 
