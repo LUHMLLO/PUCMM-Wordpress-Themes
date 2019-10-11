@@ -6,13 +6,6 @@ get_header(); ?>
 
 
 
-   <div class="home-only-header-widget" style="margin: 0 !important;padding: 0 !important; width:100% !important;">
-        <?php if ( !function_exists('dynamic_sidebar') ||
-            !dynamic_sidebar('HomeHeaderWidget Widget') ) : ?>
-        <?php endif; ?>     
-   </div>
-
-
     <div class="container bg-white" style="padding-top:50px;padding-bottom:50px;">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">

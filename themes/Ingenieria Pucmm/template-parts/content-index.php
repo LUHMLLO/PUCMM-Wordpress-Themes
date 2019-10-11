@@ -10,8 +10,8 @@
 ?>
 
 
-<article class="custom-ingenieria-news col-md-4 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-  <div class="custom-ingenieria-news">
+<article class="custom-ingenieria-news col-md-4 <?php post_class(); ?>" id="post-<?php the_ID(); ?>" style="padding:10px; !important">
+  <div class="custom-ingenieria-news-inner">
     
     <div class="custom-ingenieria-news-date">
         <?php echo get_the_date(); ?>

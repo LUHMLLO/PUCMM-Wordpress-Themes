@@ -368,16 +368,16 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 /* legacy css by Henry Martinez with a small patch for wordpress*/
 
 .henry-header {
-    border-top: 1px solid #EEEEF0;
-    border-bottom: 1px solid #EEEEF0;
     position: relative;
     z-index: 380;
+    background:white !important;
 }
 
 
 /* legacy css by Henry Martinez */
 .header-top {
     display: flex;
+    justify-content: space-between;
     padding: 10px 0;
     font-size: 10px;
     overflow: hidden;
@@ -386,13 +386,17 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
     width: 100%;
     white-space: nowrap;
 }
+.header-label{
+    display: flex;
+    justify-content: flex-end;
+}
 .header-label a,
 .header-label span {
-    color: #999;
+    color: whitesmoke;
     padding-left: 15px;
 }
 .header-label a {
-    margin-right: 15px;
+    margin-left: 15px;
 }
 .header-social {
     text-align: right;
@@ -423,7 +427,7 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 .nav-opt {
     font-size: 14px;
     font-weight: 700;
-    color: #231F20 !important;
+    color: #333 !important;
 }
 .navbar-logo img {
     display: block;
@@ -925,27 +929,29 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 .article-wrapper,
 .article-wrapper:hover {
     margin: 28px 0;
-    padding: 0 15px 0 0;
+    padding: 0 15px;
     text-decoration: none;
 }
-.article-date span {
+.article-date {
+    line-height: 17px;    
     display: block;
     color: #009DDB;
-    font-size: 18px;
+    font-size: 12.5px;
     font-weight: 700;
-}
-.article-date {
-    line-height: 17px;
-}
-.article-date small {
-    color: #231F20;
-    font-size: 14px;
+    padding:0 3px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
 }
 .article-title h4 {
     margin: 0;
     color: #8D898A;
     font-size: 14px;
     line-height: 17px;
+    padding:0 0 0 5px;
 }
 .article-row {
     display: flex;
@@ -1363,7 +1369,7 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 .single-wrapper p {
     color: #231F20;
 }
-.single-cite {
+blockquote {
     color: #fff;
     font-size: 30px;
     font-weight: 700;
@@ -1400,7 +1406,6 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
     }
     .navbar-logo {
         padding: 12px 2vw 12px 0;
-        border-right: 1px solid #EEEEF0;
     }
     .nav-opt::after {
         top: 50%;
@@ -1422,7 +1427,6 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
         display: flex;
         position: absolute;
         align-items: center;
-        border-left: 1px solid #EEEEF0;
         background: url(./img/icon-search.png) center no-repeat;
         background-size: 15px;
     }
@@ -1514,7 +1518,6 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
     }
     .flexbox-subcell {
         min-height: 320px;
-        background-color: red;
     }
     /*-- BEGIN MAP --*/
     .map-wrapper {
@@ -1656,7 +1659,6 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
         height: 40px;
         display: block;
         margin: 0 auto 10px;
-        border: 1px solid #ddd;
         background: url('./img/icon-search.png') center no-repeat;
         background-size: 15px;
     }
@@ -1726,10 +1728,10 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
     margin: 0 0 30px 0 !important;
     position: relative !important;
 
-    min-height:330px !important;
-    height:330px !important;
+    min-height:350px !important;
+    height:350px !important;
 
-    .custom-ingenieria-news{
+    .custom-ingenieria-news-inner{
         min-width: 100%;
         width:100%;
         max-width: 100%;
@@ -1888,6 +1890,88 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 }
 
 
+.custom-ingenieria-news-detailed{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+.custom-ingenieria-news-detailed-inner{
+    //meh
+}
+
+
+.custom-ingenieria-news-detailed-breadcrumbs {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 0 35px 0; 
+    font-size: 10px !important; 
+
+    ul {
+      list-style-type: none !important;
+      margin: 0;
+      padding: 0;
+      font-size: 10px !important;
+      color: #A0A7AB !important;
+      text-transform: uppercase !important;
+  
+      li {
+          display: inline-block;
+          margin-right: 10px;
+          font-size: 10px !important;
+          a{
+            font-size: 10px !important;
+            text-decoration: none !important;
+          }
+      }
+
+    }
+  }
+
+  
+
+
+.custom-ingenieria-news-detailed-image{
+    width:100%;
+    height: 350px;
+    max-height: 350px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+
+    img{
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        object-fit: cover !important;
+    }
+}
+.custom-ingenieria-news-detailed-title{
+    margin: 20px 0;
+
+    h2{
+        margin: 0 0 10px 0;
+        color: #231F20;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+
+    .custom-ingenieria-news-detailed-title-info span{
+        color: #B4B4B4;
+        font-size: 14px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
 
 
 
@@ -1903,4 +1987,187 @@ h1,h2,h3,h4,h5,h6,p,span,label,small,li,ul,strong,button,a,input,i{
 
 
 
+.flexbox-box-events{
 
+
+    
+#eventon_loadbar_section{
+    display: none !important;
+  }
+  .ajde_evcal_calendar > .evo_data,
+  .ajde_evcal_calendar > .calendar_header {
+    display: none !important;
+  }
+  .ajde_evcal_calendar{
+      padding-bottom: 0 !important;
+  }
+  
+  .eventon_events_list{
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-direction: column;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    margin-bottom: 0 !important;
+  
+    border: none !important;
+    outline: none !important;
+    padding: 0px !important;  
+    width: auto;
+    border-radius: 0 !important;
+  }
+  .eventon_events_list > .event:nth-child(1) {
+      background: #FFF !important;
+  }
+  .eventon_events_list > .event:nth-child(2) {
+      background: #EDEBEB !important;
+  }
+  .eventon_events_list > .event:nth-child(3) {
+      background: #DED9D9 !important;
+  }
+  
+  
+  .eventon_events_list > .event{
+    position: relative;
+    user-select: none !important;    
+    border: none !important;
+    padding: 0px !important;
+    margin: 0 !important;
+    overflow: hidden !important; 
+  }
+  
+  .eventon_events_list > .event > .desc_trig_outter a.evcal_list_a{
+    padding: 0px !important;
+    margin: 0 !important;
+    border:none !important;
+    
+    flex: 1 !important;
+
+    background: none !important;
+    color:#8D898A !important;
+    text-align: left !important;
+  }
+  
+  /* fecha */
+  .eventon_events_list .eventon_list_event .evcal_cblock{
+    display: none !important;
+  
+  }
+  .eventon_events_list .eventon_list_event .evcal_cblock .evcal_cblock *{
+    display: none !important;
+  }
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_start > .date{
+    display: none !important;
+  } 
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_start > .month{
+    display: none !important;
+  } 
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_end{
+    display: none !important;
+  } 
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_end *{
+    display: none !important;
+  }
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_end > .date{
+    display: none !important;
+  }
+  .eventon_events_list .eventon_list_event .evcal_cblock > .evo_end > .month{
+    display: none !important;
+  }
+  .eventon_events_list .eventon_list_event .evcal_cblock > .clear{
+    display: none !important;
+  }
+  
+  /* texto */
+  .eventon_events_list > .event > .desc_trig_outter a{
+      position: relative;
+  }
+  
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc{
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evo_above_title,
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evo_below_title,
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evcal_desc_info,
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evcal_desc3{
+    display: none !important;
+  }
+  
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc{
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+  }
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evcal_desc2.evcal_event_title{
+    font-size: 14px !important;
+    padding: 0 15px !important;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto !important;
+
+    text-align: left !important;
+  }
+  .eventon_events_list > .event > .desc_trig_outter a > .evcal_desc > .evcal_desc2.evcal_event_title *{
+      margin: auto !important;
+  }
+  
+  /* desplegable */
+  .eventon_events_list > .event > .event_description.evcal_eventcard{
+    display: none !important;
+  }
+  
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_time {
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_time > .evcal_evdata_icons{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_time > .evcal_evdata_cell{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_time > .evcal_evdata_cell > .evo_h3{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_time > .evcal_evdata_cell > p{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_ICS{
+    display: none !important;
+  } 
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_ICS > .evcal_evdata_icons{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_ICS > .evcal_evdata_cell{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_ICS > .evcal_evdata_cell > p{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_metarow_ICS > .evcal_evdata_cell > p > a{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .event_description.evcal_eventcard > .evo_card_row_end{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .desc_trig.sin_val.evcal_list_a{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .desc_trig_outter a::after{
+    display: none !important;
+  }
+  .eventon_events_list > .event > .clear.end{
+    display: none !important;
+  }
+  
+
+
+}

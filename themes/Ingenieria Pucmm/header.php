@@ -38,19 +38,19 @@
 
 
 <!-- BEGIN HEADER -->
-<div class="container">
-    <div class="header-top">
-        <div class="header-label">
-            <a id="icon-phone" href="#">(809) 200 1962</a>
-            <a id="icon-mail" href="#">info@pucmm.edu.do</a>
-            <a id="icon-clock" href="#">Lun - Sab | 8:00am - 6:00pm</a>
-        </div>
-        <div class="header-social">
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-facebook.png"/></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-twitter.png" alt="#"></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-youtube.png" alt="#"></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-instagram.png" alt="#"></a>
-            <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/icon-linkedin.png" alt="#"></a>
+
+<div style="background: #3E5B7E !important;">
+    <div class="container">
+        <div class="header-top">
+            <div class="header-go-pucmm">
+                <i class="fa fa-globe" style="color:whitesmoke"></i>
+                <a href="https://www.pucmm.edu.do/" style="color:whitesmoke">Volver al Portal</a>
+            </div>
+            <div class="header-label">
+                <a id="icon-phone" href="#">(809) 200 1962</a>
+                <a id="icon-mail" href="#">info@pucmm.edu.do</a>
+                <a id="icon-clock" href="#">Lun - Sab | 8:00am - 6:00pm</a>
+            </div>
         </div>
     </div>
 </div>
@@ -58,12 +58,11 @@
 
 
 
-
 <!-- BEGIN HEADER -->
-<header class="henry-header" style="background:white;">
+<header class="henry-header">
     <div class="container">
         <nav class="navbar navbar-main navbar-expand-lg navbar-light">
-            <a class="navbar-brand navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"4>
+            <a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>"4>
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>\img/logo.png" alt="#"/>
             </a>
 
