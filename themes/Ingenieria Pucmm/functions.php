@@ -17,41 +17,7 @@ if(function_exists('register_nav_menus')){
 }
 
 
-/* change navbar li item class */
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-     if( in_array('menu-item-has-children', $classes) ){
-             $classes[] = 'nav-item nav-main-item dropdown';
-     }
-     return $classes;
-}
- 
 
-/* change navbar li a class */
-function add_menuclass($ulclass) {
-    return preg_replace('/<a /', '<a class="nav-link nav-opt dropdown-toggle"', $ulclass);
- }
- add_filter('wp_nav_menu','add_menuclass');
-
-
- /* change navbar li sub-menu class */
-function change_submenu_class($dropdownmenu) {  
-    return preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$dropdownmenu);   
-}  
-add_filter('wp_nav_menu','change_submenu_class');  
-
-
-/*change or add link atributtes*/
-add_filter( 'nav_menu_link_attributes', 'wpse270596_add_navlink_atts', 10, 3 );
-function wpse270596_add_navlink_atts( $atts, $item, $args ) {
-  if (in_array('menu-item-has-children', $item->classes)) {
-    $atts['role'] = 'button';
-    $atts['data-toggle'] = 'dropdown';
-    $atts['aria-haspopup'] = 'true';
-    $atts['aria-expanded'] = 'false';
-  }
-return $atts;
-}
 
 
 

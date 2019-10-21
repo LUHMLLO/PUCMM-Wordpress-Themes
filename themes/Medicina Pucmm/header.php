@@ -24,6 +24,11 @@
 
 <!-- BEGIN TOP BAR-->
 <div class="top-bar">
+
+    <a href="https://pucmm.edu.do/">Ir al Portal</a>
+
+
+
     <div class="top-bar-languages container">
         <?php if ( !function_exists('dynamic_sidebar') ||
         !dynamic_sidebar('Topbar Widget') ) : ?>
@@ -37,7 +42,7 @@
 
 <!-- BEGIN HEADER -->
 <header class="main-header bg-white animated faster">
-    <div class="container-fluid main-header-navigation">
+    <div class="container main-header-navigation">
     
         <a class="main-header-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="#"/>

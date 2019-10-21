@@ -26,71 +26,45 @@
 
                 </div><!--col 8-->
 
-                <div class="col-md-4">
+
+                <div class="col-md-4 custom-padding-side-30">
                 
-
-
-            <div class="sidebar">
-                <!-- BEGIN EVENTS -->
-                <div class="flexbox-events">
-                    <a class="title-emphasis" href="#">
-                        <span>Próximos Eventos</span>
-                        <i>+</i>
-                    </a>
-                    <div class="flexbox-box-events">
-                        <a class="flexbox-box-item" href="#">
-                            <span>Exposición artística “El Callejón de las Flores”</span>
-                            <div class="flexbox-datetime">
-                                <small>26 - Noviembre | 9:00am</small>
-                                <small>Edificio A, Salón Ejecutivo - CSTA</small>
-                            </div>
-                        </a>
-                        <a class="flexbox-box-item" href="#">
-                            <span>Experto internacional ofrece conferencia sobre resiliencia […]</span>
-                            <div class="flexbox-datetime">
-                                <small>26 - Abril | 9:00am</small>
-                                <small>Edificio A, Salón Ejecutivo - CSTA</small>
-                            </div>
-                        </a>
-                        <a class="flexbox-box-item" href="#">
-                            <span>Conferencia “Cibersecurity in Industry 4.0”</span>
-                            <div class="flexbox-datetime">
-                                <small>26 - Abril | 9:00am</small>
-                                <small>Edificio A, Salón Ejecutivo - CSTA</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- BEGIN ARTICLE -->
-                <div class="flexbox-articles">
-                    <a class="title-emphasis" href="#">
-                        <span>Artículos/Noticias</span>
-                        <i>+</i>
-                    </a>
-                    <div class="article-row">
-                        <div>
-                            <?php query_posts('posts_per_page=3');
-                                if (have_posts()) : while (have_posts()) : the_post(); ?>
-                                    <a href="<?php the_permalink(); ?>" class="article-wrapper d-flex <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-                                        <div class="article-date text-center- w-25">
-                                            <?php echo get_the_date(); ?>
-                                        </div>
-                                        <div class="article-title w-75">
-                                        <h4><?php the_title(); ?></h4>
-                                        </div>						
-                                    </a><!-- //. recent post objet-->
-                            <?php endwhile; endif; ?>
-                            <?php wp_reset_query(); ?>
+                        <div class="col-12">
+                          <div style="padding:30px;"></div>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        
+                    <div id="sidebar" class="row">
+                        <div id="events-column" class="col-12">
+                            <?php echo do_shortcode("[add_eventon]"); ?>
+                        </div>
 
+                        <div class="col-12">
+                          <div style="padding:10px;"></div>
+                        </div>
 
+                        <div id="map-posts" class="col-12">
+                            <div>
+                                <?php query_posts('posts_per_page=3');
+                                    if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                        <a href="<?php the_permalink(); ?>" class="article-wrapper d-flex <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+                                            <div class="article-date text-center w-25">
+                                                <span><?php echo get_the_date(d); ?></span>
+                                                <small><?php echo get_the_date(M); ?></small>
+                                            </div>
+                                            <div class="article-title w-75">
+                                            <h4><?php echo wp_trim_excerpt(get_the_title()); ?></h4>
+                                            </div>						
+                                        </a><!-- //. recent post objet-->
+                                <?php endwhile; endif; ?>
+                                <?php wp_reset_query(); ?>                
+                            </div>
+                        </div><!---map posts---->
 
+                    </div><!--sidebar row-->
 
 
                 </div><!---col 4--->
+
 
 
             </div>

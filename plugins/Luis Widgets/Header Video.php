@@ -31,7 +31,7 @@ class Header_Video extends WP_Widget {
 		?>
 		<div class="header-video-wrapper">
 		   <video  width="100%" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline">
-		     <source src="http://medicina.pucmm.edu.do/wp-content/uploads/sites/5/2019/10/medicina2_Trim-4.mp4">
+		     <source src="https://pucmm.edu.do/Documents/medicina2.mp4">
 		   </video>
 		</div>
 		<style>
@@ -84,7 +84,7 @@ class Header_Video extends WP_Widget {
 			  left:0;
 			  margin:auto !important;
 
-			  background: rgba(14, 120, 193, 0.55);
+			  background: rgba(0, 0, 0, 0.55);
 			  opacity:0.6;
 			  min-width:100%;
 			  width:100%;
