@@ -5,12 +5,12 @@
         <div class="row">
 
 
-        <div class="footer-title col-md-12 col-sm-12">
+        <div class="d-none" disabledclass="footer-title col-md-12 col-sm-12">
             <h2>Escuela de Medicina</h2>
         </div>
 
 
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 d-none">
             <h6>Acerca de Nosotros</h6>
             <div>
                 <a href="#">Mensaje de Bienvenida</a>
@@ -26,7 +26,7 @@
                 <a href="#">Alianzas Estrategicas</a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 d-none">
             <h6>Futuros Estudiantes</h6>
             <div>
                 <a href="#">Perfil de Ingreso</a>
@@ -38,7 +38,7 @@
                 <a href="#">Plan de Estudio</a>
             </div>
         </div>
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4 col-sm-12 d-none">
             <h6>Vida Estudiantil</h6>
             <div>
                 <a href="#">Aprendizaje en el Servicio</a>
@@ -55,7 +55,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-12">
+        <div class="col-sm-12 col-md-12 d-none">
             <div class="footer-divisor"></div>
         </div>
         
@@ -63,17 +63,17 @@
         <div class="col-md-4 col-sm-12">
             <h6>Campus de Santiago</h6>
             <div>
-                <a href="#">Autopista Duarte Km 1 1/2 Santiago, República Dominicana</a>
+                <a href="#">Autopista Duarte Km. 1 1/2<br>Santiago, República Dominicana</a>
                 <br>
-                <a href="#">Tel.:(809) 580-1962</a>
+                <a href="#">Tel.: (809) 580-1962</a>
                 <br>
                 <a href="#">Fax: (809) 582-4549</a>
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
-            <h6>Campus Santo Tomás de Aquino</h6>
+            <h6>Campus de Santo Domingo</h6>
             <div>
-                <a href="#">Abraham Lincoln esq. Simón Bolívar Santo Domingo, República Dominicana</a>
+                <a href="#">Abraham Lincoln esq. Simón Bolívar<br>Santo Domingo, República Dominicana</a>
                 <br>
                 <a href="#">Tel.: (809) 535-0111</a>
                 <br>
@@ -81,9 +81,9 @@
             </div>
         </div>
         <div class="col-md-4 col-sm-12">
-            <h6>Linea de atencion</h6>
+            <h6>Línea de atención</h6>
             <div>
-                <a href="#">Tel: 1(809) 200 1962</a>
+                <a href="#">Tel.: 1(809) 200 1962</a>
                 <br>
                 <a href="#">info@pucmm.edu.do</a>
             </div>

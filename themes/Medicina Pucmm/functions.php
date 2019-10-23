@@ -3,21 +3,11 @@
 
 if ( ! function_exists( 'wp_bootstrap_4_scripts' ) ) :
 function wp_unica_scripts() {
-    $parent_style = 'parent-style'; // This is 'Awaken-style' for the Awaken theme.
+    $parent_style = 'parent-style';
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
 }
 endif;
 add_action( 'wp_enqueue_scripts', 'wp_unica_scripts' );
-
-
-
-
-
-
-
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
 
 
 
@@ -312,8 +302,6 @@ function custom_breadcrumbs() {
         echo '</ul>';  
     }
 }
-
-
 
 
 

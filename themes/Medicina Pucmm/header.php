@@ -23,18 +23,26 @@
 
 
 <!-- BEGIN TOP BAR-->
-<div class="top-bar">
+<div style="background:#186cae;">
+<div class="container">
+<div class="row top-bar justify-content-center align-content-center">
 
-    <a href="https://pucmm.edu.do/">Ir al Portal</a>
+
+            <div class="col-sm-6 col-md-6 d-flex" style="padding:2px 0;margin-left:0 !important;">
+                <i class="fas fa-angle-left ml-0 mt-auto mb-auto mr-2"></i>
+                <a href="https://pucmm.edu.do/" style="font-weight:bold;">Portal <strong style="font-weight:bolder;">PUCMM</strong></a>
+            </div>
+
+            <div class="col-sm-6 col-md-6 top-bar-languages" style="margin-right:0 !important;">
+                <?php if ( !function_exists('dynamic_sidebar') ||
+                !dynamic_sidebar('Topbar Widget') ) : ?>
+                <?php endif; ?>
+            </div>
 
 
-
-    <div class="top-bar-languages container">
-        <?php if ( !function_exists('dynamic_sidebar') ||
-        !dynamic_sidebar('Topbar Widget') ) : ?>
-        <?php endif; ?>
-    </div>
-</div>
+</div><!--top bar-->
+</div><!--container-->
+</div><!---style--->
 
 
 
@@ -45,7 +53,7 @@
     <div class="container main-header-navigation">
     
         <a class="main-header-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" alt="#"/>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/MED-2.png" alt="#"/>
         </a>
 
         <button class="main-header-btn">
