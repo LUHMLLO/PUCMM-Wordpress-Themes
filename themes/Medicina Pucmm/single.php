@@ -8,6 +8,7 @@ get_header(); ?>
 
     <div class="container bg-white pt-5 pb-5">
         <div class="container-fluid">
+        
             <?php while ( have_posts() ) : the_post(); ?> 
                 
                 <div class="post-thumbnail-single">

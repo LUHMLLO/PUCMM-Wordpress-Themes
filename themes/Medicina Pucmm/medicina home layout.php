@@ -145,9 +145,6 @@ get_header(); ?>
 			  overflow: hidden !important;
 			  box-sizing:border-box !important;
 		  }
-		  .recent-news-widget-plugin h3{
-			  padding: 5px 15px 0 15px !important;
-		  }
 		  .recent-posts-object{
 			  margin:0px !important;
 			  padding:10px !important;
@@ -194,14 +191,14 @@ get_header(); ?>
 		  }
 		  .recent-post-content a{
 			  margin: 0 !important;
-			  padding: 0 !important;
+			  padding: 10px 0 !important;
 			  font-size:16px !important;
 			  text-decoration:none !important;
 			  text-transform:uppercase !important;
 		  }
 		  .recent-posts-content-text{
 			  margin: 0 !important;
-			  padding: 0 !important;
+			  padding:10px 0 !important;
 			  font-size:12px !important;			  
 		  }
 		</style>
