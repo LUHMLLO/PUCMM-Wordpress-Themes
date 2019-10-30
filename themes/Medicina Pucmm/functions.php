@@ -66,27 +66,14 @@ add_filter( 'nav_menu_link_attributes', 'wpse270596_add_navlink_atts');
 
 
 
-
-
-
-
-
-function pagination_bar() {
-    global $wp_query;
-    $total_pages = $wp_query->max_num_pages;
-
-    if ($total_pages > 1){
-        $current_page = max(1, get_query_var('paged'));
-
-        echo paginate_links(array(
-            'base' => get_pagenum_link(1) . '%_%',
-            'format' => '/page/%#%',
-            'current' => $current_page,
-            'total' => $total_pages,
-            'type' => 'list',
-        ));
-    }
+function custom_excerpt_length( $length ) {
+    return 28;
 }
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+
+
 
 
 
@@ -139,7 +126,21 @@ add_image_size('luis_size',1920,255);
 
 
 
+function pagination_bar() {
+    global $wp_query;
 
+    $big = 999999999; // need an unlikely integer
+    
+    echo paginate_links( array(
+        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages,
+        'type' => 'list',
+        'prev_text' => '<span>Ant.</span>',
+        'next_text' => '<span>Sig.</span>'
+    ) );
+}
 
 
 
@@ -152,7 +153,7 @@ function custom_breadcrumbs() {
     $separator          = '&gt;';
     $breadcrums_id      = 'breadcrumbs';
     $breadcrums_class   = 'breadcrumbs';
-    $home_title         = 'Homepage';
+    $home_title         = 'Inicio';
     // If you have any custom post types with custom taxonomies, put the taxonomy name below (e.g. product_cat)
     $custom_taxonomy    = 'product_cat';
     // Get the query & post information

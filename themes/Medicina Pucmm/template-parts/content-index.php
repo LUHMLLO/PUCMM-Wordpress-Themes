@@ -10,7 +10,7 @@
 ?>
 
 
-<article class="news-column col-md-12 bg-white mb-5 <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
+<article class="news-column col-md-12 bg-light <?php post_class(); ?>" id="post-<?php the_ID(); ?>">
   <div class="news-column-inner">
     
   
@@ -18,7 +18,7 @@
         <?php the_post_thumbnail(); ?>
     </div>
 
-    <h4 class="news-column-title lead"><?php the_title(); ?></h4>
+    <h3 class="news-column-title lead mt-2"><?php the_title(); ?></h3>
 
     <div class="news-column-date">
         <?php echo get_the_date(); ?>
@@ -28,7 +28,7 @@
       <?php the_excerpt(); ?>
     </div>
     
-    <a class="news-column-link" href="<?php the_permalink(); ?>">ver mas</a>    
+    <a class="news-column-link" href="<?php the_permalink(); ?>">Ver más</a>    
   
   </div>        
 </article><!-- //. single blog post item-->  

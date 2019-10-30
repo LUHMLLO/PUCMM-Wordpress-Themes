@@ -29,48 +29,60 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9">
-
+            <div class="col-sm-12 col-md-9 custom-left-sidebar-layout">
+            <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
 
                 <div class="row custom-equipo-row">
-                        <div class="col-md-6 custom-equipo-persona mb-5">
+                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
                             <div class="custom-equipo-persona-inner">
-                                <img src="https://cdn.dribbble.com/users/89889/screenshots/4591352/gradienttool-dribbble.jpg" alt="">
-                                <h5>Dra. Mary Anne Butler</h5>
-                                <h6>Decana de la Facultad Ciencias de la Salud</h6>
-                                <small>telefono</small>
-                                <small>correo@correo.com</small>
+                                <div class="custom-equipo-persona-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/Doctora.png" alt="">
+                                </div>
+                                <div class="custom-equipo-persona-content">
+                                    <h5>Dra. Mary Anne Butler</h5>
+                                    <h6>Decana de la Facultad Ciencias de la Salud</h6>
+                                    <small>correo@correo.com</small>
+                                </div>
                             </div><!--custom-equipo-persona-inner--->
                         </div><!--custom-equipo-persona-col-->                         
-                        <div class="col-md-6 custom-equipo-persona mb-5">
+                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
                             <div class="custom-equipo-persona-inner">
-                                <img src="https://cdn.dribbble.com/users/89889/screenshots/4591352/gradienttool-dribbble.jpg" alt="">
-                                <h5>Lic. Katty Baduí</h5>
-                                <h6>Directora del Departamento de Premédica</h6>
-                                <small>telefono</small>
-                                <small>correo@correo.com</small>
+                                <div class="custom-equipo-persona-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/LicdaKattyMarielBaduíJáquez.jpg" alt="">
+                                </div>
+                                <div class="custom-equipo-persona-content">
+                                    <h5>Lic. Katty Baduí</h5>
+                                    <h6>Directora del Departamento de Premédica</h6>
+                                    <small>correo@correo.com</small>
+                                </div>
                             </div><!--custom-equipo-persona-inner--->
                         </div><!--custom-equipo-persona-col-->                         
-                        <div class="col-md-6 custom-equipo-persona mb-5">
+                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
                             <div class="custom-equipo-persona-inner">
-                                <img src="https://cdn.dribbble.com/users/89889/screenshots/4591352/gradienttool-dribbble.jpg" alt="">
-                                <h5>Dra. Michelle Jiménez</h5>
-                                <h6>Directora de la Escuela de Medicina</h6>
-                                <small>telefono</small>
-                                <small>correo@correo.com</small>
+                                <div class="custom-equipo-persona-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/DrMarcosDiaz.jpg" alt="">
+                                </div>
+                                <div class="custom-equipo-persona-content">
+                                    <h5>Dr. Marcos Diaz</h5>
+                                    <h6>ocupacion</h6>
+                                    <small>correo@correo.com</small>
+                                </div>
                             </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->               
-                        <div class="col-md-6 custom-equipo-persona mb-5">
+                        </div><!--custom-equipo-persona-col-->                           
+                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
                             <div class="custom-equipo-persona-inner">
-                                <img src="https://cdn.dribbble.com/users/89889/screenshots/4591352/gradienttool-dribbble.jpg" alt="">
-                                <h5>Dr. Nelson Martínez</h5>
-                                <h6>Coordinador de la carrera de Medicina</h6>
-                                <small>telefono</small>
-                                <small>correo@correo.com</small>
+                                <div class="custom-equipo-persona-image">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/ClaraSantillan.jpg" alt="">
+                                </div>
+                                <div class="custom-equipo-persona-content">
+                                    <h5>Dr. Marcos Diaz</h5>
+                                    <h6>ocupacion</h6>
+                                    <small>correo@correo.com</small>
+                                </div>
                             </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->
+                        </div><!--custom-equipo-persona-col-->  
                 </div><!-- row -->
 
 

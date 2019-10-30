@@ -29,7 +29,9 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-9 custom-left-sidebar-layout">
+            <h1 class="page-layout-title"><?php wp_title('');?></h1>
+
                 <?php
                 while ( have_posts() ) : the_post();
                 get_template_part( 'template-parts/content', 'page-full' );

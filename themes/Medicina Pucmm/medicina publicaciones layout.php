@@ -30,7 +30,7 @@ get_header(); ?>
             </div>
 
             <div class="col-sm-12 col-md-9">
-            <h1>ANALES DE MEDICINA PUCMM</h1>
+            <h1 class="page-layout-title"><?php wp_title('');?></h1>
             <p>
             Es el medio oficial de difusión que utiliza la Escuela de Medicina de la Pontifica Universidad Católica Madre y Maestra, para dar a conocer los trabajos de investigación realizados por sus estudiantes y/o personal docente, así como también las investigaciones llevadas a cabo en otras universidades o instituciones nacionales e internacionales. Esta revista es electrónica, publicada de forma bianual y se encuentra indexada en Latindex. Además, es arbitrada por el sistema de revisión por pares.
             </p>

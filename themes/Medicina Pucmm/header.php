@@ -23,9 +23,9 @@
 
 
 <!-- BEGIN TOP BAR-->
-<div style="background:#186cae;">
+<div style="background:#186cae;" class="container-fluid">
 <div class="container">
-<div class="row top-bar justify-content-center align-content-center">
+<div class="row top-bar justify-content-center align-content-center text-white text-light">
 
 
             <div class="col-sm-6 col-md-6 d-flex" style="padding:2px 0;margin-left:0 !important;">
@@ -50,7 +50,8 @@
 
 <!-- BEGIN HEADER -->
 <header class="main-header bg-white animated faster">
-    <div class="container main-header-navigation">
+<div class="container-fluid d-flex justify-content-center align-content-center" style="padding-top:0 !important;padding-bottom:0 !important;">
+    <div class="container main-header-navigation m-auto">
     
         <a class="main-header-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/MED-2.png" alt="#"/>
@@ -67,8 +68,8 @@
         ));?>   
   
     </div><!--container--->
+</div><!---container fluid--->
 </header><!---main-header-->
-
 
 
 

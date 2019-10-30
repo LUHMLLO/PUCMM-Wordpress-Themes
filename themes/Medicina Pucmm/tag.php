@@ -23,7 +23,6 @@
                     </div><!---row--->
 
 
-                    <br><br>
                         <div class="post-navigation">
                             <ul class="pagination">
                              <?php pagination_bar(); ?>
@@ -38,7 +37,7 @@
                     <div class="sidebar bg-white">
 
                         <div class="sidebar-search">
-                        <h4>Busqueda</h4>
+                        <h4>Búsqueda</h4>
                             <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
                                 <input type="text" value="" name="s" id="s" placeholder="Buscar..." />
                             </form>
@@ -58,7 +57,7 @@
                         </div><!---sidebar-publicaciones--->
 
                         <div class="sidebar-categorias">
-                            <h4>Categorias</h4>
+                            <h4>Categoría</h4>
                             <?php wp_list_cats() ?>
                         </div><!---sidebar-categorias--->
 

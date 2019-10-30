@@ -29,14 +29,14 @@ get_header(); ?>
                 </div>
         </div>
 
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-9 custom-left-sidebar-layout">
+            <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
 
 
                 <div class="custom-prueba-admision-row">
 
-                <h1>Prueba de Admisión</h1>
                 <h2>Fecha para la prueba</h2>
 
                 <table>

@@ -30,6 +30,7 @@ get_header(); ?>
             </div>
 
             <div class="col-sm-12 col-md-9">
+            <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
 
