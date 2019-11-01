@@ -34,7 +34,7 @@
 
 
                 <div class="col-md-4 sidebar-outter">
-                    <div class="sidebar bg-white">
+                    <div class="sidebar bg-light">
 
                         <div class="sidebar-search">
                         <h4>Búsqueda</h4>

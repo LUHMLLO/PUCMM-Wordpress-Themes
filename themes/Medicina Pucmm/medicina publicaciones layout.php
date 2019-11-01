@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 0 60px 0 !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
             <p>
             Es el medio oficial de difusión que utiliza la Escuela de Medicina de la Pontifica Universidad Católica Madre y Maestra, para dar a conocer los trabajos de investigación realizados por sus estudiantes y/o personal docente, así como también las investigaciones llevadas a cabo en otras universidades o instituciones nacionales e internacionales. Esta revista es electrónica, publicada de forma bianual y se encuentra indexada en Latindex. Además, es arbitrada por el sistema de revisión por pares.

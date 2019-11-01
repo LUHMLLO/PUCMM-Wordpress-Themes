@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 0 60px 0 !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
@@ -29,61 +29,70 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9 custom-left-sidebar-layout">
+            <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
 
-                <div class="row custom-equipo-row">
-                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
-                            <div class="custom-equipo-persona-inner">
-                                <div class="custom-equipo-persona-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/Doctora.png" alt="">
-                                </div>
-                                <div class="custom-equipo-persona-content">
-                                    <h5>Dra. Mary Anne Butler</h5>
-                                    <h6>Decana de la Facultad Ciencias de la Salud</h6>
-                                    <small>correo@correo.com</small>
-                                </div>
-                            </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->                         
-                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
-                            <div class="custom-equipo-persona-inner">
-                                <div class="custom-equipo-persona-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/LicdaKattyMarielBaduíJáquez.jpg" alt="">
-                                </div>
-                                <div class="custom-equipo-persona-content">
-                                    <h5>Lic. Katty Baduí</h5>
-                                    <h6>Directora del Departamento de Premédica</h6>
-                                    <small>correo@correo.com</small>
-                                </div>
-                            </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->                         
-                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
-                            <div class="custom-equipo-persona-inner">
-                                <div class="custom-equipo-persona-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/DrMarcosDiaz.jpg" alt="">
-                                </div>
-                                <div class="custom-equipo-persona-content">
-                                    <h5>Dr. Marcos Diaz</h5>
-                                    <h6>ocupacion</h6>
-                                    <small>correo@correo.com</small>
-                                </div>
-                            </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->                           
-                        <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
-                            <div class="custom-equipo-persona-inner">
-                                <div class="custom-equipo-persona-image">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/ClaraSantillan.jpg" alt="">
-                                </div>
-                                <div class="custom-equipo-persona-content">
-                                    <h5>Dr. Marcos Diaz</h5>
-                                    <h6>ocupacion</h6>
-                                    <small>correo@correo.com</small>
-                                </div>
-                            </div><!--custom-equipo-persona-inner--->
-                        </div><!--custom-equipo-persona-col-->  
-                </div><!-- row -->
+                <div class="custom-equipo-row">
+                    <div class="row">
+                            <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
+                                <div class="custom-equipo-persona-inner">
+                                    <div class="custom-equipo-persona-image">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/Doctora.png" alt="">
+                                    </div>
+                                    <div class="custom-equipo-persona-content">
+                                        <h5>Dra. Mary Anne Butler</h5>
+                                        <h6>Decana de la Facultad Ciencias de la Salud</h6>
+                                        <small>correo@correo.com</small>
+                                    </div>
+                                </div><!--custom-equipo-persona-inner--->
+                            </div><!--custom-equipo-persona-col--> 
+                    </div><!--row-->
+
+                    <div class="row">
+                            <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
+                                <div class="custom-equipo-persona-inner">
+                                    <div class="custom-equipo-persona-image">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/DrMarcosDiaz.jpg" alt="">
+                                    </div>
+                                    <div class="custom-equipo-persona-content">
+                                        <h5>Dr. Marcos Diaz</h5>
+                                        <h6>ocupacion</h6>
+                                        <small>correo@correo.com</small>
+                                    </div>
+                                </div><!--custom-equipo-persona-inner--->
+                            </div><!--custom-equipo-persona-col-->        
+
+                            <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
+                                <div class="custom-equipo-persona-inner">
+                                    <div class="custom-equipo-persona-image">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/ClaraSantillan.jpg" alt="">
+                                    </div>
+                                    <div class="custom-equipo-persona-content">
+                                        <h5>Dr. Marcos Diaz</h5>
+                                        <h6>ocupacion</h6>
+                                        <small>correo@correo.com</small>
+                                    </div>
+                                </div><!--custom-equipo-persona-inner--->
+                            </div><!--custom-equipo-persona-col-->  
+                    </div><!--row-->
+
+                    <div class="row">
+                            <div class="col-sm-6 col-md-6 custom-equipo-persona mb-5">
+                                <div class="custom-equipo-persona-inner">
+                                    <div class="custom-equipo-persona-image">
+                                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/miembros/LicdaKattyMarielBaduíJáquez.jpg" alt="">
+                                    </div>
+                                    <div class="custom-equipo-persona-content">
+                                        <h5>Lic. Katty Baduí</h5>
+                                        <h6>Directora del Departamento de Premédica</h6>
+                                        <small>correo@correo.com</small>
+                                    </div>
+                                </div><!--custom-equipo-persona-inner--->
+                            </div><!--custom-equipo-persona-col-->  
+                    </div><!--row-->     
+                </div><!-- custom-equipo-row -->
 
 
 

@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 0 60px 0 !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 

@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 0 60px 0 !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
                 </div>
         </div>
 
-            <div class="col-sm-12 col-md-9 custom-left-sidebar-layout">
+            <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
@@ -90,8 +90,8 @@ get_header(); ?>
                 La Prueba de Orientación y Medición Académica (POMA) del Ministerio de Educación Superior, Ciencia y Tecnología (MESCyT) debe ser aplicada a todos los candidatos a carreras de grado y/o técnico superior a nivel nacional de acuerdo a lo establecido en la Ley 139-01 de Educación Superior. Esta prueba diagnóstica proporciona a las universidades información sobre las habilidades tanto académicas como no académicas de sus aspirantes, a través de contenidos verbal, matemático, espacio-estructural, ciencias naturales, ciencias sociales, así como también de valoración de comportamientos humanos.
                 </p>
 
-                <h4>Libros de nivelación para POMA</h4>
-                <li><a href="https://drive.google.com/file/d/1qhxW4SHA2A3N9dpo-ERa1_8iDU5XnAly/view">Libro Matemática</a></li>
+                <h3>Libros de nivelación para POMA</h3>
+                <a class="text-light text-white" href="https://drive.google.com/file/d/1qhxW4SHA2A3N9dpo-ERa1_8iDU5XnAly/view">Libro Matemática</a>
 
 
 

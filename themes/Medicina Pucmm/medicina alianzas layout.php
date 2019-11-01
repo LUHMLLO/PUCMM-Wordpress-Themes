@@ -5,7 +5,7 @@
 get_header(); ?>
 
 
-    <div class="container bg-white" style="padding: 45px 45px 60px 45px !important;">
+    <div class="container bg-white" style="padding: 45px 0 60px 0 !important;">
         <div class="top-breadcrumb-container">
         <?php custom_breadcrumbs(); ?>
         </div>
@@ -29,7 +29,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="col-sm-12 col-md-9">
+            <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
 
@@ -72,7 +72,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/NYU.png">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/NYU.jpg">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">New York University (NYU)</h5>
@@ -86,7 +86,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/logo-universidad-ces_5099976363.jpg">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/universidadces.png">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">Universidad CES</h5>
@@ -100,7 +100,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/1200px-Butler_University_seal.svg.png">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/ButlerUniversity.jpg">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">Butler University</h5>
@@ -114,7 +114,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/1200px-Liberty_University_seal.svg.png">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/LibertyUniversity.jpg">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">Liberty University</h5>
@@ -128,7 +128,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/depaul.jpg">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/DePaulUniversity.png">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">DePaul University</h5>
@@ -170,7 +170,7 @@ get_header(); ?>
                                    <i class="fas fa-external-link-alt fa-2x"></i>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/columbia-university.png">
+                            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/img/alianzas/ColumbiaUniversity.png">
                         </a>
                         <div class="portfolio-item-caption-name">
                             <h5 class="lead d-none d-sm-none d-md-block text-center text-align-center">Columbia University</h5>

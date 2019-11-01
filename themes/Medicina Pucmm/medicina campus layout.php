@@ -1,6 +1,6 @@
 <?php 
 /*
-* Template Name: fluid container with left sidebar
+* Template Name: medicina campus layout
 */
 get_header(); ?>
 
@@ -32,15 +32,22 @@ get_header(); ?>
             <div class="col-sm-12 col-md-9 fluid-container-with-left-sidebar">
             <h1 class="page-layout-title"><?php wp_title('');?></h1>
 
-                <?php
-                while ( have_posts() ) : the_post();
-                get_template_part( 'template-parts/content', 'page-full' );
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                comments_template();
-                endif;
-                endwhile; // End of the loop.
-                ?>   
+
+                
+               <div class="row">
+                   <a href="#" class="col-md-6 campus-buttons">
+                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/campus/santiago.jpg" alt="">
+                       <span><p>Santiago<br>CSTI</p></span>
+                    </a>
+                   <a href="#" class="col-md-6 campus-buttons">
+                       <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/campus/santodomingo.jpg" alt="">
+                       <span><p>Santo Domingo<br>CSTI</p></span>
+                    </a>
+               </div>
+           
+
+
+
                 
                 <br><br>  
             </div>

@@ -6,8 +6,8 @@ get_header(); ?>
 
 
 
-    <div class="container bg-white pt-5 pb-5">
-        <div class="container-fluid">
+    <div class="container bg-light pl-0 pr-0 pt-5 pb-5 fluid-container-with-left-sidebar">
+        <div class="container-fluid p-0">
         
             <?php while ( have_posts() ) : the_post(); ?> 
                 
@@ -27,10 +27,10 @@ get_header(); ?>
     </div><!---container--->
 
 
-    <div class="container bg-white mt-5 mb-5" style="padding: 0 !important;">
+    <div class="container bg-light mt-5 mb-5" style="padding: 0 !important;">
         <div class="row recent-news-row">
-            <div class="col-md-12 mt-2" style="padding:10px !important; margin-bottom:-10px !important;">
-                <h4>Noticias Recientes</h4>
+            <div class="col-md-12 mt-2 fluid-container-with-left-sidebar" style="padding:0 10px 10px 10px !important; margin-top:-10px !important;margin-bottom:-10px !important;">
+                <h3>Noticias Recientes</h3>
             </div>
                 <?php query_posts('posts_per_page=3');
                     if (have_posts()) : while (have_posts()) : the_post(); ?>
